@@ -1,18 +1,17 @@
 .header-nav{
-    display: flex;
-    justify-content: space-around;
     background-color: #13131F;
     color: white;
-    align-items: center;
     border-bottom: 3px solid #8B008B ;
-    padding: 10px;
     height: 80px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 #itens{
     width: 100%;
-    position: fixed;
     display: block;
-    margin-top: 160px;
+    margin-top: 400px;
 }
 #burguer-menu{
     cursor: pointer;
@@ -20,12 +19,26 @@
 }
 .nav-bar{
     list-style: none;
-    background-color: red;
-    opacity: 30%;
+    background-color: #13131F;
     width: 100%;
     max-width: 400px;
+    height: 100vh;
+    position: absolute;
+    line-height: 4em;
+    font-size: 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 2em;
+    justify-content: space-evenly;
+    z-index: 100;
+
+}
+.nav-bar li{
+    width: 100%;
+    text-align: center;
+}
+.nav-bar li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: #13131F;
 }
