@@ -1,0 +1,9 @@
+@media (max-width:716px){
+    .intro{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .name-description{
+        margin-bottom: 3em;
+    }
+}

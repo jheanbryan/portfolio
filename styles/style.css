@@ -1,4 +1,5 @@
 @import 'header.css';
+@import 'responsive.css';
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,129 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
-    background-color: black;
-    overflow: hidden;
+    background-color: #13131F;
+}
+
+main{
+    max-width: 1000px;
+    margin-inline: auto;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Nome e foto*/
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 140px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+}
+.name-description{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px !important;
+}
+.name-description h2{
+    overflow: hidden; /* Esconde o texto excedente */
+    border-right: .15em solid orange; /* Cria o efeito de escrita */
+    white-space: nowrap; /* Evita quebras de linha */
+    letter-spacing: .07em; /* Espaçamento entre letras */
+    animation:
+        typing 3s steps(40, end) infinite,
+        blink-caret 1s step-end infinite,
+        repeat-typing 8s steps(40, end) infinite;
+}
+.name-description span{
+    color: gray;
+}
+
+/* Chaveframes para animação */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+@keyframes repeat-typing {
+    0%, 100% {
+        width: 0;
+    }
+    10%, 90% {
+        width: 100%;
+    }
+}
+.div-foto{
+    max-width: 300px;
+}
+.foto{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+/*Sobre mim */
+.sobre-mim{
+    max-width: 600px;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-mim p{
+    color: gray;
+    line-height: 2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Tecnologias*/
+.tecnologias{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+.itens-tecnologias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+#icon{
+    font-size: 100px;
+    margin-inline: 15px;
+    margin-top: 30px;
+}
+.itens-tecnologias img{
+    width: 100px;
+    margin-inline: 15px;
+    margin-top: 30px;
+}
+
+
+
+/*Projetos*/
+.h2-projetos{
+    margin-top: 5em;
+}
+.projetos-web-h2{
+    margin-right: auto;
+    margin-top: 3em;
+}
+.projetos-web{
+    display: flex;
 }
