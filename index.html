@@ -4,21 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Meu Portifólio</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+        <!--Header and menu navigation-->
         <header class="header-nav">
 
             <!--Menu Hamburguer-->
             <div>
-                <span id="burguerMenu" class="material-symbols-outlined" onclick="clickMenu()">
-                    menu
+                <span id="burguerMenu"  onclick="clickMenu()">
+                    <img src="assets/icons/header/bars-solid.svg" alt="icone abrir menu" class="menu-icon">
                 </span>
 
-                <span id="closeMenu" class="material-symbols-outlined" onclick="clickMenu()">
-                    close
+                <span id="closeMenu" onclick="clickMenu()">
+                    <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon">
                 </span>
             </div>
 
@@ -39,16 +38,21 @@
             
             <!--Botão mudar tema-->
             <div>
-                <span class="material-symbols-outlined" id="darkMode">
-                    dark_mode
+                <span id="darkMode">
+                    <img src="assets/icons/header/dark_mode.svg" alt="modo escuro" class="menu-icon">
                 </span>
-                <span class="material-symbols-outlined" id="lightMode">
-                    light_mode
+
+                <span id="lightMode">
+                    <img src="assets/icons/header/light_mode.svg" alt="modo claro" class="menu-icon">
+
                 </span>
             </div>
         </header>
 
+        <!--The main content-->
         <main>
+
+            <!--Introduction, name and photo-->
             <div class="intro">
                 <section class="name-description">
                         <h2>Olá, eu sou o Jhean Bryan</h2>
@@ -62,6 +66,7 @@
                 </section>
             </div>
 
+            <!--About me-->
             <div class="sobre-mim">
                 <h2>Sobre Mim</h2>
                 <div>
@@ -71,42 +76,44 @@
                 </div>
             </div>
 
+            <!--technologies-->
             <div class="tecnologias">       
                 <h2>Tecnologias</h2>
                 <div class="itens-tecnologias">
-                    <i class="devicon-html5-plain-wordmark colored" id="icon"></i>    
-                    <i class="devicon-css3-plain-wordmark colored" id="icon"></i>
-                    <i class="devicon-javascript-plain colored" id="icon"></i>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg"alt="icone do python" class="img-icon"/>   
-                    <i class="devicon-selenium-original" id="icon"></i>  
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="icone do nodejs" class="img-icon"/>
-                    <img src="https://raw.githubusercontent.com/kristerkari/react-native-svg-transformer/HEAD/images/react-native-logo.png" alt="icone do react native" class="img-icon"/>
+                    <img src="assets/icons/languages/html5.svg" alt="icone html">    
+                    <img src="assets/icons/languages/css3-alt.svg" alt="icone css">    
+                    <img src="assets/icons/languages/square-js.svg" alt="icone JavaScript">    
+                    <img src="assets/icons/languages/node-js.svg" alt="icone nodeJs">    
+                    <img src="assets/icons/languages/react.svg" alt="icone react native">    
+                    <img src="assets/icons/languages/python.svg" alt="icone python">    
                 </div>
             </div>
 
-            <h2 class="h2-projetos">Projetos</h2>
-            <h2 class="projetos-web-h2">Projetos Web</h2>
+            <!--Titles-->
+            <h2 class="h2-title">Projetos</h2>
+            <h3 class="projetos-web-h3">Projetos Web</h3>
 
+            <!--Web Projects-->
             <div class="projetos-web">
                 
                 <div class="projeto">
                     <div><span>HandsOn</span></div>
-                    <img src="assets/thumb/handson.png" alt="">
+                    <img src="assets/thumb/handson.png" alt="site handsOn">
                 </div>
 
                 <div class="projeto">
                     <div><span>Cadastro de funcionarios</span></div>
-                    <img src="assets/thumb/cadastro-funcionarios.png" alt="">
+                    <img src="assets/thumb/cadastro-funcionarios.png" alt="site cadastro de funcionarios">
                 </div>
 
                 <div class="projeto">
                     <div><span>Calculadora de imc</span></div>
-                    <img src="assets/thumb/calculadora imc.png" alt="">
+                    <img src="assets/thumb/calculadora imc.png" alt="site de calculadora de imc">
                 </div>
 
                 <div class="projeto">
                     <div><span>Gerador de Senha</span></div>
-                    <img src="assets/thumb/gerador de senha.png" alt="">
+                    <img src="assets/thumb/gerador de senha.png" alt="site gerador de senha">
                 </div>
 
             <!--
@@ -117,25 +124,38 @@
             -->   
             </div>
 
+            <!--Information for contact-->
+            <h2 class="h2-title">Contato</h2>
             <div class="contato">
                 <div class="forma-de-contato">
-                    <img src="" alt="">
-                    <span>Linkedin</span>
-                    <span>meusuad</span>
+                    <a href="https://www.linkedin.com/in/jhean-bryan/" target="_blank">
+                        <img src="assets/icons/social-media/linkedin.svg" alt="icone linkedin" class="icon-contato">
+                        <span>Linkedin</span>
+                        <span>meusuad</span>
+                    </a>
                 </div>
 
                 <div class="forma-de-contato">
-                    <img src="" alt="">
-                    <span>Email</span>
-                    <span>jheandev@gmail.com</span>
+                    <a href="mailto:jheandev@gmail.com" target="_blank">
+                        <img src="assets/icons/social-media/envelope-regular.svg" alt="icone email" class="icon-contato">
+                        <span>Email</span>
+                        <span>jheandev@gmail.com</span>
+                    </a>
                 </div>
 
                 <div class="forma-de-contato">
-                    <img src="" alt="">
-                    <span>Github</span>
-                    <span>@jheanbryan</span>
+                    <a href="https://github.com/jheanbryan" target="_blank">
+                        <img src="assets/icons/social-media/github.svg" alt="icone github" class="icon-contato">
+                        <span>Github</span>
+                        <span>@jheanbryan</span>
+                    </a>
                 </div>
 
+            </div>
+
+            <!--Arrow up-->
+            <div class="div-arrow-up">
+                <img src="assets/icons/others/arrow-up-solid.svg" alt="seta subir para o topo" class="arrow-up">
             </div>
         </main>
         <script>

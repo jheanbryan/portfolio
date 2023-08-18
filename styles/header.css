@@ -24,6 +24,10 @@
 #closeMenu{
     display: none;
 }
+.menu-icon{
+    width: 30px;
+    height: 30px;
+}
 .nav-bar{
     list-style: none;
     background-color: #13131F;

@@ -38,7 +38,7 @@ main{
 }
 .name-description h2{
     overflow: hidden; /* Esconde o texto excedente */
-    border-right: .15em solid orange; /* Cria o efeito de escrita */
+    border-right: .15em solid white; /* Cria o efeito de escrita */
     white-space: nowrap; /* Evita quebras de linha */
     letter-spacing: .07em; /* Espaçamento entre letras */
     animation:
@@ -58,7 +58,7 @@ main{
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: orange }
+    50% { border-color: white }
 }
 @keyframes repeat-typing {
     0%, 100% {
@@ -123,10 +123,10 @@ main{
 
 
 /*Projetos*/
-.h2-projetos{
+.h2-title{
     margin-top: 5em;
 }
-.projetos-web-h2{
+.projetos-web-h3{
     margin-right: auto;
     margin-top: 3em;
 }
@@ -139,6 +139,7 @@ main{
     margin-top: 20px;
     position: relative;
     max-width: 350px;
+    cursor: pointer;
 }
 .projeto div{
     position: absolute;
@@ -156,9 +157,6 @@ main{
     opacity: 0.5;
     transition: 1s;
 }
-.projeto div span{
-
-}
 .projeto img{
     max-width: 350px;
     display: block;
@@ -166,4 +164,61 @@ main{
 .projeto:hover{
     transform: scale(1.05);
     transition: 1s;
+}
+
+
+
+/*Contato*/
+.contato{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+.forma-de-contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+.forma-de-contato:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.icon-contato{
+    max-width: 50px;
+    margin-top: 10px;
+}
+.forma-de-contato a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+.forma-de-contato a span:nth-of-type(1){
+    color: white;
+    margin-bottom: 1px;
+    margin-top: 2px;
+}
+
+
+
+/*arrow up*/
+.div-arrow-up{
+    border: 2px solid white;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: auto;
+}
+.arrow-up{
+    width: 40px;
+    height: 40px;
 }
