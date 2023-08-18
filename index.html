@@ -16,7 +16,7 @@
                     <img src="assets/icons/header/bars-solid.svg" alt="icone abrir menu" class="menu-icon">
                 </span>
 
-                <span id="closeMenu" onclick="clickMenu()">
+                <span id="xMenu" onclick="clickMenu()">
                     <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon">
                 </span>
             </div>
@@ -24,10 +24,10 @@
 
             <div id="itens">
                 <ul class="nav-bar">
-                    <li>Sobre</li>
-                    <li>Tecnologias</li>
-                    <li>Projetos</li>
-                    <li>Contatos</li>
+                    <a href="#sobre" onclick="closeMenu()"><li>Sobre</li></a>
+                    <a href="#tecnologias" onclick="closeMenu()"><li>Tecnologias</li></a>
+                    <a href="#projetos" onclick="closeMenu()"><li>Projetos</li></a>
+                    <a href="#contato" onclick="closeMenu()"><li>Contato</li></a>
                 </ul>
             </div>
 
@@ -67,17 +67,19 @@
             </div>
 
             <!--About me-->
-            <div class="sobre-mim">
+            <div class="sobre-mim" id="sobre">
                 <h2>Sobre Mim</h2>
                 <div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit incidunt aspernatur quibusdam dicta, dolores a quidem blanditiis magni consectetur qui fugiat error    dolore optio ratione exercitationem voluptatibus eaque provident nostrum?
+                        Sou Desenvolverdor Front-End, estudante de TSI e ADS!
+                        Apesar de conhecer algumas tecnologias que não são para front-end, aprecio muito mais desenvolver interfaces do que desenvolver aplicações no back-end.
+                        Atualmente tenho algumas experiências com HTML, CSS, JavaScript e React-Native, pretendo em breve me aprofundar em React.
                     </p>
                 </div>
             </div>
 
             <!--technologies-->
-            <div class="tecnologias">       
+            <div class="tecnologias" id="tecnologias">       
                 <h2>Tecnologias</h2>
                 <div class="itens-tecnologias">
                     <img src="assets/icons/languages/html5.svg" alt="icone html">    
@@ -90,7 +92,7 @@
             </div>
 
             <!--Titles-->
-            <h2 class="h2-title">Projetos</h2>
+            <h2 class="h2-title" id="projetos">Projetos</h2>
             <h3 class="projetos-web-h3">Projetos Web</h3>
 
             <!--Web Projects-->
@@ -125,7 +127,7 @@
             </div>
 
             <!--Information for contact-->
-            <h2 class="h2-title">Contato</h2>
+            <h2 class="h2-title" id="contato">Contato</h2>
             <div class="contato">
                 <div class="forma-de-contato">
                     <a href="https://www.linkedin.com/in/jhean-bryan/" target="_blank">
@@ -163,15 +165,21 @@
                 if (itens.style.display == 'block'){
                     itens.style.display = 'none';
 
-                    closeMenu.style.display = 'none';
+                    xMenu.style.display = 'none';
                     burguerMenu.style.display = 'block';
                 } else{
                     itens.style.display = 'block'
 
-                    closeMenu.style.display = 'block';
+                    xMenu.style.display = 'block';
                     burguerMenu.style.display = 'none';
                 }
 
+            }
+            
+            function closeMenu(){
+                xMenu.style.display = 'none';
+                burguerMenu.style.display = 'block';
+                itens.style.display = 'none';
             }
         </script>
     </body>

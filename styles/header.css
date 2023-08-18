@@ -17,11 +17,11 @@
     margin-top: 30px;
     position: absolute;
 }
-#burguerMenu, #closeMenu{
+#burguerMenu, #xMenu{
     cursor: pointer;
     font-size: 2em;
 }
-#closeMenu{
+#xMenu{
     display: none;
 }
 .menu-icon{
@@ -43,6 +43,12 @@
     justify-content: center;
     left: 0;
     z-index: 100;
+}
+.nav-bar a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+
 }
 #darkMode, #lightMode{
     cursor: pointer;
