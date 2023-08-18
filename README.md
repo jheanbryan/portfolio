@@ -1,3 +1,3 @@
-# portifolio
+# portfolio
  
 https://jhean.netlify.app
