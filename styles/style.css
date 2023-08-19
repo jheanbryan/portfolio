@@ -110,7 +110,15 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-top: 30px
+}
+.tecnologia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8B008B;
+    margin-top: 10px;
 }
 #icon{
     font-size: 100px;
@@ -120,7 +128,6 @@ main{
 .itens-tecnologias img{
     width: 100px;
     margin-inline: 15px;
-    margin-top: 30px;
 }
 
 
@@ -220,9 +227,6 @@ main{
 /*back to top*/
 .containerArrowUp{
     margin-left: auto;
-    position: fixed;
-    z-index: 100;
-    display: none;
 }
 .arrow-up{
     width: 40px;
