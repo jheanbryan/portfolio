@@ -6,7 +6,7 @@
         <title>Meu Portfolio</title>
         <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body>
+    <body id="top-page">
         <!--Header and menu navigation-->
         <header class="header-nav">
 
@@ -99,7 +99,7 @@
             <div class="projetos-web">
                 
                 <div class="projeto">
-                    <div><span>HandsOn</span></div>
+                    <div on><span>HandsOn</span></div>
                     <img src="assets/thumb/handson.png" alt="site handsOn">
                 </div>
 
@@ -156,9 +156,11 @@
             </div>
 
             <!--Arrow up-->
-            <div class="div-arrow-up">
-                <img src="assets/icons/others/arrow-up-solid.svg" alt="seta subir para o topo" class="arrow-up">
-            </div>
+            <a href="#top-page" class="containerArrowUp" id="containerArrowUp">
+                <div class="back-to-top">
+                    <img src="assets/icons/others/arrow-up-solid.svg" alt="seta subir para o topo" class="arrow-up">
+                </div>
+            </a>
         </main>
         <script>
             function clickMenu(){
@@ -181,6 +183,15 @@
                 burguerMenu.style.display = 'block';
                 itens.style.display = 'none';
             }
+
+            window.addEventListener('scroll', function(){
+                if (document.documentElement.scrollTop > 100 ){
+                    containerArrowUp.style.display = 'block';
+                }
+                else{
+                    containerArrowUp.style.display = 'none';
+                }
+            })
         </script>
     </body>
 </html>
