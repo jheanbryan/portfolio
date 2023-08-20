@@ -261,9 +261,20 @@ dialog{
     position: fixed;
     z-index: 100;
     border: 3px solid #8B008B;
+    flex-direction: column;
 }
 dialog::backdrop{
     background-color: black; 
+}
+.containerX{
+    width: 100%;
+    display: flex;
+}
+#xModal{
+    margin-left: auto;
+}
+.modal-content{
+    display: flex;
 }
 .img-and-info{
     display: flex;
@@ -275,8 +286,26 @@ dialog::backdrop{
     max-width: 100%;
     height: auto;
 }
+.container-buttons{
+    margin-top: 10px;
+}
+.btn-modal{
+    background-color: #8B008B;
+    color: white;
+    font-size: 1.1em;
+    padding: 2px;
+    height: 45px;
+    width: 180px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-top: 5px;
+    cursor: pointer;
+}
 .desciption-project{
     padding: 15px;
     width: 100%;
     max-width: 450px;
+}
+#tituloDoProjeto{
+    text-align: center;
 }

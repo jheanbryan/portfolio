@@ -192,21 +192,26 @@
             <!--Modal for project-->
             <dialog>
 
-                <div class="img-and-info">
-                    <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal" width="900px">
-                    <div class="container-buttons">
-                        <button>Ver projeto</button>
-                        <button>Ver repositório</button>
+                <div class="containerX">
+                    <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon" onclick="closeModal()" id="xModal">
+                </div>
+
+                <div class="modal-content">
+                    <div class="img-and-info">
+                        <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal" width="900px">
+                        <div class="container-buttons">
+                            <button class="btn-modal">Ver projeto</button>
+                            <button class="btn-modal">Ver repositório</button>
+                        </div>
+                    </div>
+                
+                    <div class="desciption-project">
+                        <h1 id="tituloDoProjeto">Titulo do projeto</h1>
+                        <p id="DescricaoDoProjeto">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio eveniet voluptate repellendus, nesciunt, ullam exercitationem quam laudantium eligendi ea, sed maiores at inventore eius ab vel atque pariatur corporis.
+                        </p>
                     </div>
                 </div>
-            
-                <div class="desciption-project">
-                    <h1>Titulo do projeto</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio eveniet voluptate repellendus, nesciunt, ullam exercitationem quam laudantium eligendi ea, sed maiores at inventore eius ab vel atque pariatur corporis.
-                    </p>
-                </div>
-                <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon" onclick="closeModal()" id="xModal">
                 
             </dialog>
 
