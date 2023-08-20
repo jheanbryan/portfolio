@@ -9,7 +9,7 @@
     justify-content: space-around;
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 2;
 }
 #itens{
     width: 100%;
@@ -27,6 +27,7 @@
 .menu-icon{
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 .nav-bar{
     list-style: none;

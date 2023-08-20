@@ -245,3 +245,31 @@ main{
     background-color: #8B008B;
     color: white;
 }
+
+
+/*Modal*/
+dialog{
+    background-color: #13131F;
+    color: gray;
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    border-radius: 15px;
+    top: 50%; /* Coloca o topo do modal no meio vertical da tela */
+    left: 50%; /* Coloca o lado esquerdo do modal no meio horizontal da tela */
+    transform: translate(-50%, -50%); /* Centraliza o modal na tela */
+    position: fixed;
+    z-index: 100;
+}
+.img-and-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 600px;
+}
+.img-modal{
+    max-width: 600px;
+}
+.desciption-project{
+    padding: 15px;
+}

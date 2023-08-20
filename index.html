@@ -125,24 +125,24 @@
             <!--Web Projects-->
             <div class="projetos-web">
                 
-                <div class="projeto">
-                    <div on><span>HandsOn</span></div>
+                <div class="projeto" onclick="openModal('handson')">
+                    <div><span>HandsOn</span></div>
                     <img src="assets/thumb/handson.png" alt="site handsOn">
                 </div>
 
-                <div class="projeto">
+                <div class="projeto" onclick="openModal('cadastro-funcionarios')">
                     <div><span>Cadastro de funcionarios</span></div>
                     <img src="assets/thumb/cadastro-funcionarios.png" alt="site cadastro de funcionarios">
                 </div>
 
-                <div class="projeto">
+                <div class="projeto" onclick="openModal('calculadora-imc')">
                     <div><span>Calculadora de imc</span></div>
-                    <img src="assets/thumb/calculadora imc.png" alt="site de calculadora de imc">
+                    <img src="assets/thumb/calculadora-imc.png" alt="site de calculadora de imc">
                 </div>
 
-                <div class="projeto">
+                <div class="projeto" onclick="openModal('gerador-de-senha')">
                     <div><span>Gerador de Senha</span></div>
-                    <img src="assets/thumb/gerador de senha.png" alt="site gerador de senha">
+                    <img src="assets/thumb/gerador-de-senha.png" alt="site gerador de senha">
                 </div>
 
             <!--
@@ -189,7 +189,27 @@
                 </div>
             </a>
 
+            <!--Modal for project-->
+            <dialog>
+
+                <div class="img-and-info">
+                    <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal">
+                    <div class="container-buttons">
+                        <button>Ver projeto</button>
+                        <button>Ver repositório</button>
+                    </div>
+                </div>
             
+                <div class="desciption-project">
+                    <h1>Titulo do projeto</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio eveniet voluptate repellendus, nesciunt, ullam exercitationem quam laudantium eligendi ea, sed maiores at inventore eius ab vel atque pariatur corporis.
+                    </p>
+                </div>
+                <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon" onclick="closeModal()">
+                
+            </dialog>
+
         </main>
         <script>
             function clickMenu(){
@@ -213,6 +233,43 @@
                 itens.style.display = 'none';
             }
 
+            let modal = document.querySelector('dialog');
+
+            function openModal(projeto){
+                if (projeto === 'handson'){
+                    imgModal.src = 'assets/thumb/handson.png';
+                    imgModal.alt = "site HandsOn";
+
+                    modal.style.display = 'flex'
+                    modal.show();
+                }
+                if (projeto === 'cadastro-funcionarios'){
+                    imgModal.src = 'assets/thumb/cadastro-funcionarios.png';
+                    imgModal.alt = "site cadastro de funcionarios";
+
+                    modal.style.display = 'flex'
+                    modal.show();
+                }
+                if (projeto === 'calculadora-imc'){
+                    imgModal.src = 'assets/thumb/calculadora-imc.png';
+                    imgModal.alt = "site de calculadora de imc";
+
+                    modal.style.display = 'flex'
+                    modal.show();
+                }
+                if (projeto === 'gerador-de-senha'){
+                    imgModal.src = 'assets/thumb/gerador-de-senha.png';
+                    imgModal.alt = "site gerador de senha";
+
+                    modal.style.display = 'flex'
+                    modal.show();
+                }
+            }
+
+            function closeModal(){
+                modal.close();
+                modal.style.display = 'none'
+            }
 
         </script>
     </body>
