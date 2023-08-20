@@ -262,15 +262,21 @@ dialog{
     z-index: 100;
     border: 3px solid #8B008B;
 }
+dialog::backdrop{
+    background-color: black; 
+}
 .img-and-info{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    max-width: 600px;
+    width: 100%;
 }
 .img-modal{
-    max-width: 600px;
+    max-width: 100%;
+    height: auto;
 }
 .desciption-project{
     padding: 15px;
+    width: 100%;
+    max-width: 450px;
 }

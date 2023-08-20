@@ -7,3 +7,21 @@
         margin-bottom: 3em;
     }
 }
+
+@media (max-width:850px){
+    dialog{
+        flex-direction: column;
+    }
+    .img-and-info{
+        margin-top: 50px;
+    }
+    .img-modal{
+      
+    }
+    .desciption-project{
+        margin-top: 50px;
+    }
+    .xModal{
+        margin-left: auto;
+    }
+}
