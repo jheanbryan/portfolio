@@ -37,6 +37,14 @@ const projects = [
         description:'Projeto web simples, porém com um pouco mais de estilização, recolhe o número de caracteres do usuário e retorna uma senha aleatória.',
         alt: 'Site Gerador de senha'
     },
+    {
+        name: 'zapbot',
+        title: 'Bot de WhatsApp',
+        path: 'assets/thumb/gerador-de-senha.png',
+        link: 'https://github.com/jheanbryan/zap-bot',
+        repo: 'https://github.com/jheanbryan/zap-bot',
+        description:'Projeto em feito em NodeJS, um bot de WhatsApp construído com base na API baileys, além disso contém algumas funcionalidades, como buscar cep, baixar músicas do Youtube e fazer figurinhas.'
+    },
 ];
 
 //Função para procurar um projeto

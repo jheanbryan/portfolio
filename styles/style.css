@@ -136,13 +136,15 @@ main{
 .h2-title{
     margin-top: 5em;
 }
-.projetos-web-h3{
+.projetos-title-h2{
     margin-right: auto;
     margin-top: 3em;
 }
-.projetos-web{
+.container-projetos{
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
 }
 .projeto{
     margin-inline: 10px;
