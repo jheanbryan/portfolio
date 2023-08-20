@@ -260,6 +260,7 @@ dialog{
     transform: translate(-50%, -50%); /* Centraliza o modal na tela */
     position: fixed;
     z-index: 100;
+    border: 3px solid #8B008B;
 }
 .img-and-info{
     display: flex;
