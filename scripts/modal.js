@@ -61,6 +61,8 @@ function openModal(projeto){
         imgModal.alt = projects[position].alt;
         tituloDoProjeto.innerHTML = projects[position].title;
         descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
         modal.style.display = 'flex'
         modal.show();
     }
@@ -70,6 +72,8 @@ function openModal(projeto){
         imgModal.alt = projects[position].alt;
         tituloDoProjeto.innerHTML = projects[position].title;
         descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
         modal.style.display = 'flex';
         modal.show();
     }
@@ -79,6 +83,8 @@ function openModal(projeto){
         imgModal.alt = projects[position].alt;
         tituloDoProjeto.innerHTML = projects[position].title;
         descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
         modal.style.display = 'flex';
         modal.show();
     }
@@ -88,6 +94,8 @@ function openModal(projeto){
         imgModal.alt = projects[position].alt;
         tituloDoProjeto.innerHTML = projects[position].title;
         descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
         modal.style.display = 'flex';
         modal.show();
     }
