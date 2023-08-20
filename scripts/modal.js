@@ -1,3 +1,5 @@
+//import { projects, searchProject } from './projects.js';
+
 let modal = document.querySelector('dialog');
 
 function openModal(projeto){
@@ -47,3 +49,4 @@ function closeModal(){
     modal.close();
     modal.style.display = 'none'
 }
+console.log(projects)
