@@ -1,52 +1,101 @@
-//import { projects, searchProject } from './projects.js';
+// const com dados de cada projeto
+const projects = [
+    {
+        name: 'handson',
+        title: 'HandsOn',
+        path: 'assets/thumb/handson.png',
+        link: 'https://handsonweb.netlify.app',
+        repo: 'https://github.com/jheanbryan/HandsOn',
+        description:'Página web simples, feita apenas para relembrar alguns conceitos de HTML e CSS.',
+        alt: 'Site HandsOn'
 
+    },
+    {
+        name: 'cadastro-funcionarios',
+        title: 'Cadastro de funcionários',
+        path: 'assets/thumb/cadastro-funcionarios.png',
+        link: 'https://crudfuncionarios.netlify.app',
+        repo: 'https://github.com/jheanbryan/cadastro_funcionarios',
+        description:'CRUD - CREATE, READ UPDATE e DELETE <br> Os dados inseridos pelo usuário são salvos no Local Storage.',
+        alt: 'Site Cadastro de funcionários'
+    },
+    {
+        name: 'calculadora-imc',
+        title: 'Calculadora de IMC',
+        path: 'assets/thumb/calculadora-imc.png',
+        link: 'https://jheanbryan.github.io/calculadora-imc/',
+        repo: 'https://github.com/jheanbryan/calculadora-imc',
+        description:'Projeto simples de uma calculadora de IMC, um dos primeiros projetos feitos, bem simples, foi usado o DOM para manipular os elementos HTML.',
+        alt: 'Site Calculadora IMC'
+    },
+    {
+        name: 'gerador-de-senha',
+        title: 'Site gerador de senha',
+        path: 'assets/thumb/gerador-de-senha.png',
+        link: 'https://jheanbryan.github.io/site-gerador-de-senha/',
+        repo: 'https://github.com/jheanbryan/site-gerador-de-senha',
+        description:'Projeto web simples, porém com um pouco mais de estilização, recolhe o número de caracteres do usuário e retorna uma senha aleatória.',
+        alt: 'Site Gerador de senha'
+    },
+];
+
+//Função para procurar um projeto
+let position;
+function searchProject(projectName){
+    for (let i = 0; i < projects.length; i++) {
+        if (projects[i].name === projectName) {
+            return projects, position = [i]
+            break;
+        }
+    }
+};
+
+
+
+// Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
-
 function openModal(projeto){
     if (projeto === 'handson'){
-        imgModal.src = 'assets/thumb/handson.png';
-        imgModal.alt = "site HandsOn";
-
-        tituloDoProjeto.innerHTML = 'HandsOn'
-        DescricaoDoProjeto.innerHTML = 'bla bla'
-
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
         modal.style.display = 'flex'
         modal.show();
     }
     if (projeto === 'cadastro-funcionarios'){
-        imgModal.src = 'assets/thumb/cadastro-funcionarios.png';
-        imgModal.alt = "site cadastro de funcionarios";
-
-        tituloDoProjeto.innerHTML = 'Cadastro de funcionarios';
-        DescricaoDoProjeto.innerHTML = 'bla bla'
-
-        modal.style.display = 'flex'
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        modal.style.display = 'flex';
         modal.show();
     }
     if (projeto === 'calculadora-imc'){
-        imgModal.src = 'assets/thumb/calculadora-imc.png';
-        imgModal.alt = "site de calculadora de imc";
-
-        tituloDoProjeto.innerHTML = 'Calculdora de IMC'
-        DescricaoDoProjeto.innerHTML = 'bla bla'
-
-        modal.style.display = 'flex'
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        modal.style.display = 'flex';
         modal.show();
     }
     if (projeto === 'gerador-de-senha'){
-        imgModal.src = 'assets/thumb/gerador-de-senha.png';
-        imgModal.alt = "site gerador de senha";
-
-        tituloDoProjeto.innerHTML = 'Gerador de Senha'
-        DescricaoDoProjeto.innerHTML = 'bla bla'
-
-        modal.style.display = 'flex'
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        modal.style.display = 'flex';
         modal.show();
     }
 }
 
+
+//Função para fechar o modal
 function closeModal(){
     modal.close();
-    modal.style.display = 'none'
+    modal.style.display = 'none';
 }
-console.log(projects)

@@ -309,3 +309,6 @@ dialog::backdrop{
 #tituloDoProjeto{
     text-align: center;
 }
+#descricaoDoProjeto{
+    margin-top: 25px;
+}
