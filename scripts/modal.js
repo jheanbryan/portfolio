@@ -40,10 +40,65 @@ const projects = [
     {
         name: 'zapbot',
         title: 'Bot de WhatsApp',
-        path: 'assets/thumb/gerador-de-senha.png',
+        path: 'assets/thumb/zap-bot.png',
         link: 'https://github.com/jheanbryan/zap-bot',
         repo: 'https://github.com/jheanbryan/zap-bot',
-        description:'Projeto em feito em NodeJS, um bot de WhatsApp construído com base na API baileys, além disso contém algumas funcionalidades, como buscar cep, baixar músicas do Youtube e fazer figurinhas.'
+        description:'Projeto em feito em NodeJS, um bot de WhatsApp construído com base na API baileys, além disso contém algumas funcionalidades, como buscar cep, baixar músicas do Youtube e fazer figurinhas.',
+        alt: 'Bot para o WhatsApp'
+    },
+    {
+        name: 'api-lp3',
+        title: 'API/CRUD com NodeJs e MongoDB',
+        path: 'assets/thumb/api-lp3.png',
+        link: 'https://github.com/jheanbryan/api-lp3',
+        repo: 'https://github.com/jheanbryan/api-lp3',
+        description:'Projeto desenvolvido como critério de avaliação durante a disciplina de LP3 do curso técnico em informática do IFMS <br> Foi desenvolvido uma api/crud que armazene algumas informações no MongoDB, sendo um produto que tem nome, valor e data da criação. ',
+        alt: 'CRUD com NodeJs e MongoDB'
+    },
+    {
+        name: 'crud-postgreSql',
+        title: 'CRUD com NodeJs e PostgreSql',
+        path: 'assets/thumb/crud-postgresql.png',
+        link: 'https://github.com/jheanbryan/crud_postgreesql',
+        repo: 'https://github.com/jheanbryan/crud_postgreesql',
+        description:'CRUD - CREATE, READ UPDATE e DELETE <br>Projeto realizado na disciplina de LP4 do curso técnico em informática do IFMS <br>Projeto construído com NodeJs e PostgreSQL como banco de dados. Para o desenvolvimento desse projeto foi pensado em uma imobiliária, onde é necessário guardar informações de clientes, visto que cada cliente deve possuir uma id, a propriedade e o valor.',
+        alt: 'CRUD com NodeJs e PostegreSQL'
+    },
+    {
+        name: 'netflix-login',
+        title: 'Tela de Login da Netflix Mobile',
+        path: 'assets/thumb/netflix-login.png',
+        link: 'https://snack.expo.dev/@jhean/netflix-login',
+        repo: 'https://snack.expo.dev/@jhean/netflix-login',
+        description:'Clone da tela de login da Netflix Mobile, apenas para fixar alguns dos conceitos básicos de estilização do React Native',
+        alt: 'Clone da tela de Login da Netflix'
+    },
+    {
+        name: 'calculadoras-saude',
+        title: 'Calculadoras Saúde',
+        path: 'assets/thumb/calculadoras-saude.png',
+        link: 'https://snack.expo.dev/@jhean/calculadeiras-saude',
+        repo: 'https://snack.expo.dev/@jhean/calculadeiras-saude',
+        description:'APP com 3 telas, onde cada tela realiza um calculo diferente, tais como IMC, ICQ e Peso Ideal.',
+        alt: 'Calculadoras para a saúde'
+    },
+    {
+        name: 'calculadoras-areas',
+        title: 'Calculadoras de Áreas',
+        path: 'assets/thumb/calculadoras-areas.png',
+        link: 'https://snack.expo.dev/@jhean/calculadora-de-areas',
+        repo: 'https://snack.expo.dev/@jhean/calculadora-de-areas',
+        description:'APP com 5 telas, onde cada tela realiza um calculo matemático diferente, como foi pensado em áreas, os respectivos calculos das áreas são: Quadrado, Triângulo, Círculo, Hexágono e Retângulo.',
+        alt: 'Calculadoras de áreas'
+    },
+    {
+        name: 'agendador-contatos',
+        title: 'Agenda de contatos',
+        path: 'assets/thumb/agendador-contatos.png',
+        link: 'https://snack.expo.dev/@jhean/lista-tarefas',
+        repo: 'https://snack.expo.dev/@jhean/lista-tarefas',
+        description:'APP simples que armazena valores inseridos pelo usuário, sendo ele o número e o nome de um contato, simulando uma agenda.',
+        alt: 'Agenda de contatos'
     },
 ];
 
@@ -97,6 +152,83 @@ function openModal(projeto){
         modal.show();
     }
     if (projeto === 'gerador-de-senha'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'zapbot'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'api-lp3'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'crud-postgreSql'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'netflix-login'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'calculadoras-saude'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'calculadoras-areas'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'agendador-contatos'){
         searchProject(projeto); // procurar o projeto
         imgModal.src = projects[position].path;
         imgModal.alt = projects[position].alt;
