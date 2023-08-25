@@ -302,7 +302,6 @@ dialog::backdrop{
     border-radius: 4px;
     border: 1px solid black;
     margin-top: 5px;
-    cursor: pointer;
 }
 .desciption-project{
     padding: 15px;
