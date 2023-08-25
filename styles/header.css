@@ -53,6 +53,7 @@
 }
 #darkMode, #lightMode{
     cursor: pointer;
+    display: block;
 }
 #darkMode{
     display: none;

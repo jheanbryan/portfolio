@@ -18,3 +18,18 @@ function closeMenu(){
     burguerMenu.style.display = 'block';
     itens.style.display = 'none';
 }
+
+function alterTheme(theme){
+    if (theme === 'dark') {
+        darkMode.style.display = 'none';
+        lightMode.style.display = 'block';
+        document.querySelector('html').classList.toggle('light-mode')
+
+    } else if (theme === 'light') {
+        darkMode.style.display = 'block';
+        lightMode.style.display = 'none';
+        document.querySelector('html').classList.toggle('light-mode')
+    }
+
+
+}

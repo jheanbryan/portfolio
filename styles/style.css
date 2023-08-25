@@ -7,8 +7,20 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
+:root{
+    --background:#13131F;
+    --border:#8B008B;
+    --color1: white;
+    --color2: gray;
+}
+.light-mode{
+    --background:white;
+    --border:#8B008B;
+    --color1: black;
+    --color2: gray;
+}
 body{
-    background-color: #13131F;
+    background-color: var(--background);
 }
 :target{
     scroll-margin-top: 6em;
@@ -16,7 +28,7 @@ body{
 main{
     max-width: 1000px;
     margin-inline: auto;
-    color: white;
+    color: var(--color1);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -41,7 +53,7 @@ main{
 }
 .name-description h2{
     overflow: hidden; /* Esconde o texto excedente */
-    border-right: .15em solid white; /* Cria o efeito de escrita */
+    border-right: .15em solid var(--color1); /* Cria o efeito de escrita */
     white-space: nowrap; /* Evita quebras de linha */
     letter-spacing: .07em; /* Espaçamento entre letras */
     animation:
@@ -220,7 +232,7 @@ main{
     cursor: pointer;
 }
 .forma-de-contato a span:nth-of-type(1){
-    color: white;
+    color: var(--color1);
     margin-bottom: 1px;
     margin-top: 2px;
 }
@@ -237,7 +249,7 @@ main{
 }
 .back-to-top {
     background-color: transparent;
-    border: 2px solid #8B008B;
+    border: 2px solid var(--border);
     border-radius: 50%;
     padding: 10px 10px;
     cursor: pointer;
@@ -245,7 +257,7 @@ main{
 }
 
 .back-to-top:hover {
-    background-color: #8B008B;
+    background-color: var(--border);
     color: white;
 }
 
