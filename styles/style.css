@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
+    
 }
 :root{
     --background:#13131F;
@@ -14,7 +15,7 @@
     --color2: gray;
 }
 .light-mode{
-    --background:white;
+    --background: whitesmoke;
     --border:#8B008B;
     --color1: black;
     --color2: gray;
@@ -73,7 +74,7 @@ main{
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: white }
+    50% { border-color: var(--color1) }
 }
 @keyframes repeat-typing {
     0%, 100% {
@@ -131,6 +132,9 @@ main{
     align-items: center;
     color: #8B008B;
     margin-top: 10px;
+}
+.tecnologia span{
+    font-weight: bold;
 }
 #icon{
     font-size: 100px;
@@ -221,6 +225,9 @@ main{
 .icon-contato{
     max-width: 50px;
     margin-top: 10px;
+    background-color: #13131F;
+    border-radius: 10px;
+    padding: 5px;
 }
 .forma-de-contato a{
     display: flex;
@@ -248,7 +255,7 @@ main{
     height: 40px;
 }
 .back-to-top {
-    background-color: transparent;
+    background-color: #13131F;
     border: 2px solid var(--border);
     border-radius: 50%;
     padding: 10px 10px;
