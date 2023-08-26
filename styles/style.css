@@ -1,11 +1,13 @@
 @import 'header.css';
 @import 'responsive.css';
+@import 'scrollbar.css';
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
+    scroll-margin-top: 6em;
     
 }
 :root{
@@ -15,16 +17,13 @@
     --color2: gray;
 }
 .light-mode{
-    --background: whitesmoke;
+    --background: gainsboro;
     --border:#8B008B;
     --color1: black;
     --color2: gray;
 }
 body{
     background-color: var(--background);
-}
-:target{
-    scroll-margin-top: 6em;
 }
 main{
     max-width: 1000px;
