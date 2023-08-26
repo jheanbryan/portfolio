@@ -114,131 +114,18 @@ function searchProject(projectName){
 };
 
 
-
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
 function openModal(projeto){
-    if (projeto === 'handson'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex'
-        modal.show();
-    }
-    if (projeto === 'cadastro-funcionarios'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'calculadora-imc'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'gerador-de-senha'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'zapbot'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'api-lp3'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'crud-postgreSql'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'netflix-login'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'calculadoras-saude'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'calculadoras-areas'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'agendador-contatos'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
+    searchProject(projeto); // procurar o projeto
+    imgModal.src = projects[position].path;
+    imgModal.alt = projects[position].alt;
+    tituloDoProjeto.innerHTML = projects[position].title;
+    descricaoDoProjeto.innerHTML = projects[position].description;
+    btnModalProjeto.href = projects[position].link;
+    btnModalRepositorio.href = projects[position].repo;
+    modal.style.display = 'flex';
+    modal.show();
 }
 
 

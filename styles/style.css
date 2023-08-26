@@ -283,6 +283,7 @@ dialog{
     z-index: 100;
     border: 3px solid #8B008B;
     flex-direction: column;
+    gap: 10px;
 }
 dialog::backdrop{
     background-color: black; 
@@ -296,6 +297,9 @@ dialog::backdrop{
 }
 .modal-content{
     display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
 }
 .img-and-info{
     display: flex;
@@ -304,8 +308,7 @@ dialog::backdrop{
     width: 100%;
 }
 .img-modal{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
 }
 .container-buttons{
     margin-top: 10px;
@@ -322,7 +325,6 @@ dialog::backdrop{
     margin-top: 5px;
 }
 .desciption-project{
-    padding: 15px;
     width: 100%;
     max-width: 450px;
 }
