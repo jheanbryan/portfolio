@@ -100,6 +100,15 @@ const projects = [
         description:'APP simples que armazena valores inseridos pelo usuário, sendo ele o número e o nome de um contato, simulando uma agenda.',
         alt: 'Agenda de contatos'
     },
+    {
+        name: 'medidor-velocidade-internet',
+        title: 'Medidor de velocidade de internet',
+        path: 'assets/thumb/medidor-velocidade-internet.png',
+        link: 'https://github.com/jheanbryan/medir-velocidade-internet',
+        repo: 'https://github.com/jheanbryan/medir-velocidade-internet',
+        description:'Programa em python com interface que mede a velocidade de download e upload da internet, os valores gerados são salvos em um relatório.',
+        alt: 'Medidor de velocidade de internet'
+    },
 ];
 
 //Função para procurar um projeto
