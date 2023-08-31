@@ -44,6 +44,7 @@
     justify-content: center;
     left: 0;
     z-index: 100;
+    gap: 5px;
 }
 .nav-bar a{
     text-decoration: none;

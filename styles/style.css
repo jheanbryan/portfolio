@@ -311,7 +311,10 @@ dialog::backdrop{
     width: 100%;
 }
 .container-buttons{
-    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .btn-modal{
     background-color: #8B008B;
