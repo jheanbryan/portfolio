@@ -1,6 +1,7 @@
 let navbarItens = document.getElementById('itens'); // div do navbar
 let xCloseMenu = document.getElementById('xMenu'); //X do menu
 let barsOpenMen = document.getElementById('burguerMenu'); //Barras de abrir menu
+let itenMenu = document.querySelectorAll('.navBarIten');
 
 function clickMenu(){
     if (navbarItens.style.display == 'block'){
@@ -34,4 +35,10 @@ function alterTheme(theme){
     }
 
 
+}
+barsOpenMen.addEventListener('click', clickMenu);
+xCloseMenu.addEventListener('click', clickMenu);
+
+for (let i = 0; i < itenMenu.length; i++) {
+    itenMenu[i].addEventListener('click', closeMenu);
 }
