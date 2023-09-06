@@ -122,7 +122,6 @@ function searchProject(projectName){
     }
 };
 
-
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
 function openModal(projeto){
@@ -143,3 +142,7 @@ function closeModal(){
     modal.close();
     modal.style.display = 'none';
 }
+
+let xModal = document.getElementById('xModal'); 
+
+xModal.addEventListener('click', closeModal)

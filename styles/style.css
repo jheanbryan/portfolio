@@ -317,6 +317,7 @@ dialog::backdrop{
     flex-wrap: wrap;
 }
 .btn-modal{
+    cursor: pointer;
     background-color: #8B008B;
     color: white;
     font-size: 1.1em;
