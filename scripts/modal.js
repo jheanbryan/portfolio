@@ -118,6 +118,15 @@ const projects = [
         description:'APP simples que armazena valores inseridos pelo usuário, sendo ele o número e o nome de um contato, simulando uma agenda.',
         alt: 'Agenda de contatos'
     },
+    {
+        name: 'medidor-velocidade-internet',
+        title: 'Medidor de velocidade de internet',
+        path: 'assets/thumb/medidor-velocidade-internet.png',
+        link: 'https://github.com/jheanbryan/medir-velocidade-internet',
+        repo: 'https://github.com/jheanbryan/medir-velocidade-internet',
+        description:'Programa em python com interface que mede a velocidade de download e upload da internet, os valores gerados são salvos em um relatório.',
+        alt: 'Medidor de velocidade de internet'
+    },
 ];
 
 //Função para procurar um projeto
@@ -130,8 +139,6 @@ function searchProject(projectName){
         }
     }
 };
-
-
 
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
@@ -257,28 +264,6 @@ function openModal(projeto){
         modal.style.display = 'flex';
         modal.show();
     }
-    if (projeto === 'magazine-hashtag'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
-    if (projeto === 'dev-link'){
-        searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    }
 }
 
 
@@ -287,3 +272,7 @@ function closeModal(){
     modal.close();
     modal.style.display = 'none';
 }
+
+let xModal = document.getElementById('xModal'); 
+
+xModal.addEventListener('click', closeModal)

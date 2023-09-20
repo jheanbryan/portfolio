@@ -12,11 +12,11 @@
 
             <!--Menu Hamburguer-->
             <div>
-                <span id="burguerMenu"  onclick="clickMenu()">
+                <span id="burguerMenu">
                     <img src="assets/icons/header/bars-solid.svg" alt="icone abrir menu" class="menu-icon">
                 </span>
 
-                <span id="xMenu" onclick="clickMenu()">
+                <span id="xMenu">
                     <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon">
                 </span>
             </div>
@@ -24,10 +24,10 @@
 
             <div id="itens">
                 <ul class="nav-bar">
-                    <a href="#sobre" onclick="closeMenu()"><li>Sobre</li></a>
-                    <a href="#tecnologias" onclick="closeMenu()"><li>Tecnologias</li></a>
-                    <a href="#projetos" onclick="closeMenu()"><li>Projetos</li></a>
-                    <a href="#contato" onclick="closeMenu()"><li>Contato</li></a>
+                    <a href="#sobre" class="navBarIten"><li>Sobre</li></a>
+                    <a href="#tecnologias" class="navBarIten"><li>Tecnologias</li></a>
+                    <a href="#projetos" class="navBarIten"><li>Projetos</li></a>
+                    <a href="#contato" class="navBarIten"><li>Contato</li></a>
                 </ul>
             </div>
 
@@ -38,11 +38,11 @@
             
             <!--Botão mudar tema-->
             <div>
-                <span id="darkMode" onclick="alterTheme('dark')">
+                <span id="darkMode" >
                     <img src="assets/icons/header/dark_mode.svg" alt="modo escuro" class="menu-icon">
                 </span>
 
-                <span id="lightMode" onclick="alterTheme('light')">
+                <span id="lightMode" >
                     <img src="assets/icons/header/light_mode.svg" alt="modo claro" class="menu-icon">
                 </span>
             </div>
@@ -198,7 +198,17 @@
                     <div><span>Agendador de contatos</span></div>
                     <img src="assets/thumb/agendador-contatos.png" alt="Agendador de contatos">
                 </div>
+            </div>
 
+            <!--Projetos Python-->
+            <h3 class="projetos-title-h2">Projetos Python</h3>
+            <div class="container-projetos">
+                
+                <div class="projeto" onclick="openModal('medidor-velocidade-internet')">
+                    <div><span>Medidor de Internet</span></div>
+                    <img src="assets/thumb/medidor-velocidade-internet.png" alt="Medidor de Internet">
+                </div>
+    
             </div>
 
             <!--Information for contact-->
@@ -241,15 +251,15 @@
             <dialog>
 
                 <div class="containerX">
-                    <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon" onclick="closeModal()" id="xModal">
+                    <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon" id="xModal">
                 </div>
 
                 <div class="modal-content">
                     <div class="img-and-info">
-                        <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal" width="900px">
+                        <div class="container-img-modal"><img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal"></div>
                         <div class="container-buttons">
-                            <a href="" target="_blank" id="btnModalProjeto"><button class="btn-modal" >Ver projeto</button></a> 
-                            <a href="" target="_blank" id="btnModalRepositorio"><button class="btn-modal">Ver repositório</button></a>
+                            <a href="" target="_blank" id="btnModalProjeto"><button class="btn-modal">Ver projeto</button></a> 
+                            <a href="" target="_blank" id="btnModalRepositorio"><button class="btn-modal" tabindex="10">Ver repositório</button></a>
                         </div>
                     </div>
                 
@@ -265,6 +275,6 @@
 
         </main>
         <script src="scripts/menu.js"></script>
-        <script  src="scripts/modal.js"></script>
+        <script src="scripts/modal.js"></script>
     </body>
 </html>

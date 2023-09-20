@@ -12,8 +12,8 @@
     .modal-content{
         flex-direction: column;
     }
-    .img-and-info{
-        margin-top: 20px;
+    .container-img-modal{
+        max-width: 400px;
     }
     .desciption-project{
         margin-top: 20px;
