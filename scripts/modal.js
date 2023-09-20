@@ -140,163 +140,75 @@ function searchProject(projectName){
     }
 };
 
+function infosProjeto(){
+    imgModal.src = projects[position].path;
+    imgModal.alt = projects[position].alt;
+    tituloDoProjeto.innerHTML = projects[position].title;
+    descricaoDoProjeto.innerHTML = projects[position].description;
+    btnModalProjeto.href = projects[position].link;
+    btnModalRepositorio.href = projects[position].repo;
+    modal.style.display = 'flex'
+    modal.show();
+}
+
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
 function openModal(projeto){
     if (projeto === 'handson'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex'
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'cadastro-funcionarios'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'calculadora-imc'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'gerador-de-senha'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'zapbot'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'api-lp3'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'crud-postgreSql'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'netflix-login'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'calculadoras-saude'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'calculadoras-areas'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'agendador-contatos'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
-    
+        infosProjeto();
     }
     if (projeto === 'magazine-hashtag'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'dev-link'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
     if (projeto === 'medidor-velocidade-internet'){
         searchProject(projeto); // procurar o projeto
-        imgModal.src = projects[position].path;
-        imgModal.alt = projects[position].alt;
-        tituloDoProjeto.innerHTML = projects[position].title;
-        descricaoDoProjeto.innerHTML = projects[position].description;
-        btnModalProjeto.href = projects[position].link;
-        btnModalRepositorio.href = projects[position].repo;
-        modal.style.display = 'flex';
-        modal.show();
+        infosProjeto();
     }
 }
 
