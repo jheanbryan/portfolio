@@ -263,6 +263,40 @@ function openModal(projeto){
         btnModalRepositorio.href = projects[position].repo;
         modal.style.display = 'flex';
         modal.show();
+    
+    }
+    if (projeto === 'magazine-hashtag'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'dev-link'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'medidor-velocidade-internet'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
     }
 }
 
