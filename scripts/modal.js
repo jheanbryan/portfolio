@@ -38,6 +38,24 @@ const projects = [
         alt: 'Site Gerador de senha'
     },
     {
+        name: 'magazine-hashtag',
+        title: 'Ecomerce',
+        path: 'assets/thumb/magazine-hashtag.png',
+        link: 'https://github.com/jheanbryan/magazine-hashtag',
+        repo: 'https://github.com/jheanbryan/magazine-hashtag',
+        description:'Ecomerce construído durante o intensivão de JavaScript da Hashtag. Esse projeto utiliza o localStorage como banco de dados para salvar as informações do usuário, tais como histórico de compras e itens adicionados ao carrinho.',
+        alt: 'Ecomerce'
+    },
+    {
+        name: 'dev-link',
+        title: 'Site Dev Link',
+        path: 'assets/thumb/dev-link.png',
+        link: 'https://jheanbryan.github.io/dev-link/',
+        repo: 'https://github.com/jheanbryan/dev-link',
+        description:'Projeto web simples realizado durante o curso Discovery da Rocketseat',
+        alt: 'dev link - site simples'
+    },
+    {
         name: 'zapbot',
         title: 'Bot de WhatsApp',
         path: 'assets/thumb/zap-bot.png',
@@ -229,6 +247,28 @@ function openModal(projeto){
         modal.show();
     }
     if (projeto === 'agendador-contatos'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'magazine-hashtag'){
+        searchProject(projeto); // procurar o projeto
+        imgModal.src = projects[position].path;
+        imgModal.alt = projects[position].alt;
+        tituloDoProjeto.innerHTML = projects[position].title;
+        descricaoDoProjeto.innerHTML = projects[position].description;
+        btnModalProjeto.href = projects[position].link;
+        btnModalRepositorio.href = projects[position].repo;
+        modal.style.display = 'flex';
+        modal.show();
+    }
+    if (projeto === 'dev-link'){
         searchProject(projeto); // procurar o projeto
         imgModal.src = projects[position].path;
         imgModal.alt = projects[position].alt;

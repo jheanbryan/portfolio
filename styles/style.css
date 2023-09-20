@@ -189,6 +189,7 @@ main{
 .projeto img{
     max-width: 350px;
     display: block;
+    height: 211px;
 }
 .projeto:hover{
     transform: scale(1.05);
@@ -314,6 +315,7 @@ dialog::backdrop{
     border-radius: 4px;
     border: 1px solid black;
     margin-top: 5px;
+    cursor: pointer;
 }
 .desciption-project{
     padding: 15px;
