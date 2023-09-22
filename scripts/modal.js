@@ -54,6 +54,15 @@ const projetosWeb = [
         description:'Projeto web simples realizado durante o curso Discovery da Rocketseat',
         alt: 'dev link - site simples'
     },
+    {
+        name: 'login-form',
+        title: 'Formulário de Login',
+        path: 'assets/thumb/login-form.png',
+        link: 'https://login-formweb.netlify.app',
+        repo: 'https://github.com/jheanbryan/login-form',
+        description:'Formulário de Login com HTML + CSS, projeto proposto no Discovery da Rocketseat',
+        alt: 'Login Form - Formulario de Login'
+    },
 ];
 
 const projetosNode = [
@@ -215,6 +224,10 @@ function openModal(nomeDoProjeto){
     if (nomeDoProjeto == 'dev-link'){
         searchProject(nomeDoProjeto); // procurar o projeto
         infosProjeto(projetosWeb[5]);
+    }
+    if (nomeDoProjeto == 'login-form'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[6]);
     }
     if (nomeDoProjeto == 'zapbot'){
         searchProject(nomeDoProjeto); // procurar o projeto
