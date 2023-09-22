@@ -1,5 +1,4 @@
-// const com dados de cada projeto
-const projects = [
+const projetosWeb = [
     {
         name: 'handson',
         title: 'HandsOn',
@@ -55,6 +54,9 @@ const projects = [
         description:'Projeto web simples realizado durante o curso Discovery da Rocketseat',
         alt: 'dev link - site simples'
     },
+];
+
+const projetosNode = [
     {
         name: 'zapbot',
         title: 'Bot de WhatsApp',
@@ -82,6 +84,9 @@ const projects = [
         description:'CRUD - CREATE, READ UPDATE e DELETE <br>Projeto realizado na disciplina de LP4 do curso técnico em informática do IFMS <br>Projeto construído com NodeJs e PostgreSQL como banco de dados. Para o desenvolvimento desse projeto foi pensado em uma imobiliária, onde é necessário guardar informações de clientes, visto que cada cliente deve possuir uma id, a propriedade e o valor.',
         alt: 'CRUD com NodeJs e PostegreSQL'
     },
+];
+
+const projetosReactNative = [
     {
         name: 'netflix-login',
         title: 'Tela de Login da Netflix Mobile',
@@ -118,6 +123,9 @@ const projects = [
         description:'APP simples que armazena valores inseridos pelo usuário, sendo ele o número e o nome de um contato, simulando uma agenda.',
         alt: 'Agenda de contatos'
     },
+];
+
+const projetosPython = [
     {
         name: 'medidor-velocidade-internet',
         title: 'Medidor de velocidade de internet',
@@ -129,88 +137,123 @@ const projects = [
     },
 ];
 
-//Função para procurar um projeto
-let position;
-function searchProject(projectName){
-    for (let i = 0; i < projects.length; i++) {
-        if (projects[i].name === projectName) {
-            return projects, position = [i]
+//redenizador de projetos no html
+let containerWeb = document.getElementById('projetos-web');
+let containerNodeJs = document.getElementById('projetos-node');
+let containerReactNative = document.getElementById('projetos-react-native');
+let containerPython = document.getElementById('projetos-python');
+
+function redenizarProjeto(nomeDaDiv, nomeContainer){
+    function desenharConteudo(listaDeProjetos){
+        for(let i = 0; i<listaDeProjetos.length; i++){
+            let projeto = listaDeProjetos[i];
+            let divContent = `
+            <div class="projeto" onclick= openModal("${projeto.name}")>
+            <div><span>${projeto.title}</span></div>
+            <img src=${projeto.path} alt=${projeto.alt}>
+            </div>
+            `;
+            nomeContainer.innerHTML += divContent;
+        }
+    }
+
+    desenharConteudo(nomeDaDiv);
+
+}
+
+function acharProjeto(){
+
+}
+//modal
+//Buscar o projeto
+let position = 0;
+function searchProject(listaDeProjetos, nomeDoProjeto){
+    for (let i = 0; i < listaDeProjetos.length; i++) {
+        if (listaDeProjetos[i].name === nomeDoProjeto) {
+            return listaDeProjetos, position = [i]
             break;
         }
     }
 };
 
-function infosProjeto(){
-    imgModal.src = projects[position].path;
-    imgModal.alt = projects[position].alt;
-    tituloDoProjeto.innerHTML = projects[position].title;
-    descricaoDoProjeto.innerHTML = projects[position].description;
-    btnModalProjeto.href = projects[position].link;
-    btnModalRepositorio.href = projects[position].repo;
+//Buscar informações do projeto
+function infosProjeto(listaDeProjetos){
+    imgModal.src = listaDeProjetos.path;
+    imgModal.alt = listaDeProjetos.alt;
+    tituloDoProjeto.innerHTML = listaDeProjetos.title;
+    descricaoDoProjeto.innerHTML = listaDeProjetos.description;
+    btnModalProjeto.href = listaDeProjetos.link;
+    btnModalRepositorio.href = listaDeProjetos.repo;
     modal.style.display = 'flex'
     modal.show();
 }
 
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
-function openModal(projeto){
-    if (projeto === 'handson'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+function openModal(nomeDoProjeto){
+    if (nomeDoProjeto == 'handson'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[0])
     }
-    if (projeto === 'cadastro-funcionarios'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'cadastro-funcionarios'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[1])
+
     }
-    if (projeto === 'calculadora-imc'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'calculadora-imc'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[2]);
     }
-    if (projeto === 'gerador-de-senha'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'gerador-de-senha'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[3]);
     }
-    if (projeto === 'zapbot'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'magazine-hashtag'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[4]);
     }
-    if (projeto === 'api-lp3'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'dev-link'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[5]);
     }
-    if (projeto === 'crud-postgreSql'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'zapbot'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosNode[0]);
     }
-    if (projeto === 'netflix-login'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'api-lp3'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosNode[1]);
     }
-    if (projeto === 'calculadoras-saude'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'crud-postgreSql'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosNode[2]);
     }
-    if (projeto === 'calculadoras-areas'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'netflix-login'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosReactNative[0]);
     }
-    if (projeto === 'agendador-contatos'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'calculadoras-saude'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosReactNative[1]);
     }
-    if (projeto === 'magazine-hashtag'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'calculadoras-areas'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosReactNative[2]);
     }
-    if (projeto === 'dev-link'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'agendador-contatos'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosReactNative[3]);
     }
-    if (projeto === 'medidor-velocidade-internet'){
-        searchProject(projeto); // procurar o projeto
-        infosProjeto();
+    if (nomeDoProjeto == 'medidor-velocidade-internet'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosPython[0]);
     }
 }
+redenizarProjeto(projetosWeb, containerWeb);
+redenizarProjeto(projetosNode, containerNodeJs);
+redenizarProjeto(projetosReactNative, containerReactNative);
+redenizarProjeto(projetosPython, containerPython);
+
 
 
 //Função para fechar o modal

@@ -285,6 +285,7 @@ dialog{
     border: 3px solid #8B008B;
     flex-direction: column;
     gap: 10px;
+    overflow-y: auto;
 }
 dialog::backdrop{
     background-color: black; 
@@ -316,6 +317,7 @@ dialog::backdrop{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 .btn-modal{
     cursor: pointer;
