@@ -1,10 +1,10 @@
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, dialog::-webkit-scrollbar {
     width: 12px;
 }
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, dialog::-webkit-scrollbar-track {
     background: var(--border); 
 }
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, dialog::-webkit-scrollbar-track {
     background-color: var(--background); 
     border-radius: 10px;
     border: 2px solid var(--border);
