@@ -209,69 +209,73 @@ function infosProjeto(listaDeProjetos){
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
 function openModal(nomeDoProjeto){
-    if (nomeDoProjeto == 'handson'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[0])
-    }
-    if (nomeDoProjeto == 'cadastro-funcionarios'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[1])
-    }
-    if (nomeDoProjeto == 'calculadora-imc'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[2]);
-    }
-    if (nomeDoProjeto == 'gerador-de-senha'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[3]);
-    }
-    if (nomeDoProjeto == 'magazine-hashtag'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[4]);
-    }
-    if (nomeDoProjeto == 'dev-link'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[5]);
-    }
-    if (nomeDoProjeto == 'login-form'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[6]);
-    }
-    if (nomeDoProjeto == 'pagina-de-clima'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosWeb[7]);
-    }
-    if (nomeDoProjeto == 'zapbot'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosNode[0]);
-    }
-    if (nomeDoProjeto == 'api-lp3'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosNode[1]);
-    }
-    if (nomeDoProjeto == 'crud-postgreSql'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosNode[2]);
-    }
-    if (nomeDoProjeto == 'netflix-login'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosReactNative[0]);
-    }
-    if (nomeDoProjeto == 'calculadoras-saude'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosReactNative[1]);
-    }
-    if (nomeDoProjeto == 'calculadoras-areas'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosReactNative[2]);
-    }
-    if (nomeDoProjeto == 'agendador-contatos'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosReactNative[3]);
-    }
-    if (nomeDoProjeto == 'medidor-velocidade-internet'){
-        searchProject(nomeDoProjeto); // procurar o projeto
-        infosProjeto(projetosPython[0]);
+    switch (nomeDoProjeto) {
+        case 'handson':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[0])
+            break;
+        case 'cadastro-funcionarios':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[1])
+            break;
+        case 'calculadora-imc':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[2])
+            break;
+        case 'gerador-de-senha':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[3])
+            break;
+        case 'magazine-hashtag':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[4])
+            break;
+        case 'dev-link':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[5])
+            break;
+        case 'login-form':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[6])
+            break;
+        case 'pagina-de-clima':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[7])
+            break;
+        case 'zapbot':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosNode[0])
+            break;   
+        case 'api-lp3':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosNode[1])
+            break; 
+        case 'crud-postgreSql':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosNode[2])
+            break;   
+        case 'netflix-login':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosReactNative[0])
+            break;   
+        case 'calculadoras-saude':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosReactNative[1])
+            break;  
+        case 'calculadoras-areas':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosReactNative[2])
+            break; 
+        case 'agendador-contatos':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosReactNative[3])
+            break;  
+        case 'medidor-velocidade-internet':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosPython[0])
+            break;  
+        default:
+            break;
     }
 }
 redenizarProjeto(projetosWeb, containerWeb);
