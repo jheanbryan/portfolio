@@ -63,6 +63,15 @@ const projetosWeb = [
         description:'Formulário de Login com HTML + CSS, projeto proposto no Discovery da Rocketseat',
         alt: 'Login Form - Formulario de Login'
     },
+    {
+        name: 'pagina-de-clima',
+        title: 'Página de Clima',
+        path: 'assets/thumb/pagina-de-clima.png',
+        link: 'https://pagina-de-clima.netlify.app',
+        repo: 'https://github.com/jheanbryan/pagina-de-clima',
+        description:'Desafio Login Form CSS do Discovery da Rocketseat. O desafio inicial era apenas recriar o layout com HTML e CSS, no enentanto, utilizei um pouco de JS para consumir APIs e preencher com informações reais.',
+        alt: 'Página de clima'
+    },
 ];
 
 const projetosNode = [
@@ -207,7 +216,6 @@ function openModal(nomeDoProjeto){
     if (nomeDoProjeto == 'cadastro-funcionarios'){
         searchProject(nomeDoProjeto); // procurar o projeto
         infosProjeto(projetosWeb[1])
-
     }
     if (nomeDoProjeto == 'calculadora-imc'){
         searchProject(nomeDoProjeto); // procurar o projeto
@@ -228,6 +236,10 @@ function openModal(nomeDoProjeto){
     if (nomeDoProjeto == 'login-form'){
         searchProject(nomeDoProjeto); // procurar o projeto
         infosProjeto(projetosWeb[6]);
+    }
+    if (nomeDoProjeto == 'pagina-de-clima'){
+        searchProject(nomeDoProjeto); // procurar o projeto
+        infosProjeto(projetosWeb[7]);
     }
     if (nomeDoProjeto == 'zapbot'){
         searchProject(nomeDoProjeto); // procurar o projeto
