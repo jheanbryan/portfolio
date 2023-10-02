@@ -69,7 +69,7 @@ const projetosWeb = [
         path: 'assets/thumb/pagina-de-clima.png',
         link: 'https://pagina-de-clima.netlify.app',
         repo: 'https://github.com/jheanbryan/pagina-de-clima',
-        description:'Desafio Login Form CSS do Discovery da Rocketseat. O desafio inicial era apenas recriar o layout com HTML e CSS, no enentanto, utilizei um pouco de JS para consumir APIs e preencher com informações reais.',
+        description:'Desafio Página de Clima do Discovery da Rocketseat. O desafio inicial era apenas recriar o layout com HTML e CSS, no enentanto, utilizei um pouco de JS para consumir APIs e preencher com informações reais.',
         alt: 'Página de clima'
     },
 ];
