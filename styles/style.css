@@ -248,7 +248,9 @@ main{
 
 /*back to top*/
 .containerArrowUp{
-    margin-left: auto;
+    z-index: 100;
+    right: 30px;
+    display: none;
 }
 .arrow-up{
     width: 40px;

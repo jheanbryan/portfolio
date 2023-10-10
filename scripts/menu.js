@@ -1,29 +1,23 @@
-let navbarItens = document.getElementById('itens'); // div do navbar
-let xCloseMenu = document.getElementById('xMenu'); //X do menu
-let barsOpenMen = document.getElementById('burguerMenu'); //Barras de abrir menu
-let itenMenu = document.querySelectorAll('.navBarIten'); //navbar menu
+const navbarItens = document.getElementById('itens'); // div do navbar
+const xCloseMenu = document.getElementById('xMenu'); //X do menu
+const barsOpenMen = document.getElementById('burguerMenu'); //Barras de abrir menu
+const itenMenu = document.querySelectorAll('.navBarIten'); //navbar menu
 
-let dark = document.getElementById('darkMode'); //modo dark
-let light = document.getElementById('lightMode'); //modo claro
+const dark = document.getElementById('darkMode'); //modo dark
+const light = document.getElementById('lightMode'); //modo claro
 
+const arrowUp = document.getElementById('containerArrowUp');
 
-function clickMenu(){
-    if (navbarItens.style.display == 'block'){
-        navbarItens.style.display = 'none';
-        xCloseMenu.style.display = 'none';
-        barsOpenMen.style.display = 'block';
-    } else{
-        navbarItens.style.display = 'block'
-        xCloseMenu.style.display = 'block';
-        barsOpenMen.style.display = 'none';
-    }
-
+function openMenu(){
+    navbarItens.style.left = '0'
+    xCloseMenu.style.display = 'block';
+    barsOpenMen.style.display = 'none';
 }
 
 function closeMenu(){
+    navbarItens.style.left = '-400px';
     xCloseMenu.style.display = 'none';
     barsOpenMen.style.display = 'block';
-    navbarItens.style.display = 'none';
 }
 
 function alterTheme(theme){
@@ -42,8 +36,8 @@ function alterTheme(theme){
 }
 
 //menu
-barsOpenMen.addEventListener('click', clickMenu);
-xCloseMenu.addEventListener('click', clickMenu);
+barsOpenMen.addEventListener('click', openMenu);
+xCloseMenu.addEventListener('click', closeMenu);
 
 //dark mode
 dark.addEventListener('click', () => alterTheme('dark'));
@@ -52,3 +46,12 @@ light.addEventListener('click', () => alterTheme('light'));
 for (let i = 0; i < itenMenu.length; i++) {
     itenMenu[i].addEventListener('click', closeMenu);
 }
+
+
+window.addEventListener('scroll', function() {
+    var scrollVertical = window.scrollY || document.documentElement.scrollTop;
+
+    if (scrollVertical >= 1250) {
+        console.log(scrollVertical);
+    }
+});
