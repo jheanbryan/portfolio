@@ -40,7 +40,7 @@ const projetosWeb = [
         name: 'magazine-hashtag',
         title: 'Ecomerce',
         path: 'assets/thumb/magazine-hashtag.png',
-        link: 'https://github.com/jheanbryan/magazine-hashtag',
+        link: 'https://magazine-hashtag-livid.vercel.app',
         repo: 'https://github.com/jheanbryan/magazine-hashtag',
         description:'Ecomerce construído durante o intensivão de JavaScript da Hashtag. Esse projeto utiliza o localStorage como banco de dados para salvar as informações do usuário, tais como histórico de compras e itens adicionados ao carrinho.',
         alt: 'Ecomerce'
