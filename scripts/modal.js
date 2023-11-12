@@ -166,12 +166,13 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
         for(let i = 0; i<listaDeProjetos.length; i++){
             let projeto = listaDeProjetos[i];
             let divContent = `
-            <div class="projeto" onclick= openModal("${projeto.name}")>
+            <div class="projeto" id="${projeto.name}">
             <div><span>${projeto.title}</span></div>
             <img src=${projeto.path} alt=${projeto.alt}>
             </div>
             `;
             nomeContainer.innerHTML += divContent;
+
         }
     }
 
@@ -179,9 +180,14 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
 
 }
 
-function acharProjeto(){
-
+function createAddEventListener(){
+    const projetosArray = document.querySelectorAll('.projeto');
+    projetosArray.forEach((item) => {
+        item.addEventListener('click', () => openModal(item.id));
+    });
 }
+
+
 //modal
 //Buscar o projeto
 let position = 0;
@@ -209,6 +215,7 @@ function infosProjeto(listaDeProjetos){
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('dialog');
 function openModal(nomeDoProjeto){
+    console.log('to no open modal ')
     switch (nomeDoProjeto) {
         case 'handson':
             searchProject(nomeDoProjeto); // procurar o projeto
@@ -282,6 +289,7 @@ redenizarProjeto(projetosWeb, containerWeb);
 redenizarProjeto(projetosNode, containerNodeJs);
 redenizarProjeto(projetosReactNative, containerReactNative);
 redenizarProjeto(projetosPython, containerPython);
+createAddEventListener()
 
 
 
