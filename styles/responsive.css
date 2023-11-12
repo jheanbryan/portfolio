@@ -1,4 +1,4 @@
-@media (max-width:716px){
+@media screen and (max-width:716px){
     .intro{
         flex-direction: column;
         justify-content: center;
@@ -8,7 +8,7 @@
     }
 }
 
-@media (max-width:850px){
+@media screen and (max-width:850px){
     .modal-content{
         flex-direction: column;
         align-items: center;
@@ -21,5 +21,11 @@
     }
     .desciption-project{
         margin-top: 20px;
+    }
+}
+
+@media  screen and (max-width: 400px) {
+    .name-description h2{
+        font-size: 1.1em;
     }
 }
