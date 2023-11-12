@@ -254,6 +254,7 @@ main{
     position: fixed;
     animation: down 2s;
     bottom: 40px;
+    display: none;
 }
 .arrow-up{
     width: 40px;
