@@ -1,0 +1,10 @@
+@keyframes down {
+    from{
+        bottom: 100px;
+        opacity: 0.5;
+    }
+    to{
+        bottom: 40px;
+        opacity: 1;
+    }
+}

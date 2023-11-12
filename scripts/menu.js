@@ -52,6 +52,9 @@ window.addEventListener('scroll', function() {
     var scrollVertical = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollVertical >= 1250) {
-        console.log(scrollVertical);
+        arrowUp.style.display = 'block';
+
+    } else {
+        arrowUp.style.display = 'none'
     }
 });

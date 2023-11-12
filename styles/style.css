@@ -248,9 +248,11 @@ main{
 
 /*back to top*/
 .containerArrowUp{
-    z-index: 100;
+    z-index: 3;
     right: 30px;
-    display: none;
+    position: fixed;
+    animation: down 2s;
+    bottom: 40px;
 }
 .arrow-up{
     width: 40px;
