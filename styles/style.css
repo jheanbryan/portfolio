@@ -262,7 +262,7 @@ main{
 }
 .back-to-top {
     background-color: #13131F;
-    border: 2px solid var(--border);
+    border: 4px solid var(--border);
     border-radius: 50%;
     padding: 10px 10px;
     cursor: pointer;
@@ -276,7 +276,7 @@ main{
 
 
 /*Modal*/
-dialog{
+.modal{
     background-color: #13131F;
     color: gray;
     width: 90%;
@@ -293,7 +293,7 @@ dialog{
     gap: 10px;
     overflow-y: auto;
 }
-dialog::backdrop{
+.modal::backdrop{
     background-color: black; 
 }
 .containerX{

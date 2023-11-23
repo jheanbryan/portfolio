@@ -58,7 +58,7 @@ function infosProjeto(listaDeProjetos){
 }
 
 // Função que verifica qual modal é e abri, já preenchido
-let modal = document.querySelector('dialog');
+let modal = document.querySelector('.modal');
 function openModal(nomeDoProjeto){
     console.log('to no open modal ')
     switch (nomeDoProjeto) {
@@ -142,7 +142,6 @@ createAddEventListener()
 
 //Função para fechar o modal
 function closeModal(){
-    modal.close();
     modal.style.display = 'none';
 }
 
