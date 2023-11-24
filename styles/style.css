@@ -292,6 +292,7 @@ main{
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
+    display: none;
 }
 .modal::backdrop{
     background-color: black; 

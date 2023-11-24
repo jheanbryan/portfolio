@@ -54,13 +54,11 @@ function infosProjeto(listaDeProjetos){
     btnModalProjeto.href = listaDeProjetos.link;
     btnModalRepositorio.href = listaDeProjetos.repo;
     modal.style.display = 'flex'
-    modal.show();
 }
 
 // Função que verifica qual modal é e abri, já preenchido
 let modal = document.querySelector('.modal');
 function openModal(nomeDoProjeto){
-    console.log('to no open modal ')
     switch (nomeDoProjeto) {
         case 'handson':
             searchProject(nomeDoProjeto); // procurar o projeto
