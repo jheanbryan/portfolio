@@ -72,6 +72,15 @@ export const projetosWeb = [
         description:'Desafio Página de Clima do Discovery da Rocketseat. O desafio inicial era apenas recriar o layout com HTML e CSS, no enentanto, utilizei um pouco de JS para consumir APIs e preencher com informações reais.',
         alt: 'Página de clima'
     },
+    {
+        name: 'clone-youtube',
+        title: 'Clone do Youtube',
+        path: 'assets/thumb/clone-youtube.png',
+        link: 'https://clone-youtubee.vercel.app/',
+        repo: 'https://github.com/jheanbryan/youtube',
+        description:'Clone do Youtube com HTML, CSS e JS puro. Até o momento desenvolvi apenas a pagina inicial, pretendo avançar com esse projeto e implementar algumas funcionalidades do youtube, como assistir os vídeos ao passar o mouse e também criar uma página que seja possível assistir o cada vídeo.',
+        alt: 'Clone do Youtube'
+    },
 ];
 
 export const projetosNode = [

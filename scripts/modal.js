@@ -92,6 +92,10 @@ function openModal(nomeDoProjeto){
             searchProject(nomeDoProjeto); // procurar o projeto
             infosProjeto(projetosWeb[7])
             break;
+        case 'clone-youtube':
+            searchProject(nomeDoProjeto); // procurar o projeto
+            infosProjeto(projetosWeb[8])
+            break;
         case 'zapbot':
             searchProject(nomeDoProjeto); // procurar o projeto
             infosProjeto(projetosNode[0])
