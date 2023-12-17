@@ -12,7 +12,9 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
             let projeto = listaDeProjetos[i];
             let divContent = `
             <div class="projeto" id="${projeto.name}">
-            <div><span>${projeto.title}</span></div>
+            <div class="info-project">
+                <span>${projeto.title}</span>
+            </div>
             <img src=${projeto.path} alt=${projeto.alt}>
             </div>
             `;
@@ -40,7 +42,6 @@ function searchProject(listaDeProjetos, nomeDoProjeto){
     for (let i = 0; i < listaDeProjetos.length; i++) {
         if (listaDeProjetos[i].name === nomeDoProjeto) {
             return listaDeProjetos, position = [i]
-            break;
         }
     }
 };
@@ -68,7 +69,7 @@ function openModal(nomeDoProjeto){
             searchProject(nomeDoProjeto); // procurar o projeto
             infosProjeto(projetosWeb[1])
             break;
-        case 'calculadora-imc':
+        case 'calculadora':
             searchProject(nomeDoProjeto); // procurar o projeto
             infosProjeto(projetosWeb[2])
             break;

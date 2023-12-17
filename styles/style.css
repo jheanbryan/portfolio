@@ -171,7 +171,7 @@ main{
     max-width: 350px;
     cursor: pointer;
 }
-.projeto div{
+.projeto > div{
     position: absolute;
     color: whitesmoke;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
@@ -183,11 +183,11 @@ main{
     align-items: center;
     justify-content: center;
 }
-.projeto div:hover{
+.projeto > div:hover{
     opacity: 0.5;
     transition: 1s;
 }
-.projeto div:hover span{
+.projeto > div:hover span{
     opacity: 0;
     transition: 0.3s;
 }

@@ -19,12 +19,12 @@ export const projetosWeb = [
         alt: 'Site Cadastro de funcionários'
     },
     {
-        name: 'calculadora-imc',
-        title: 'Calculadora de IMC',
-        path: 'assets/thumb/calculadora-imc.png',
-        link: 'https://jheanbryan.github.io/calculadora-imc/',
-        repo: 'https://github.com/jheanbryan/calculadora-imc',
-        description:'Projeto simples de uma calculadora de IMC, um dos primeiros projetos feitos, bem simples, foi usado o DOM para manipular os elementos HTML.',
+        name: 'calculadora',
+        title: 'Calculadora',
+        path: 'assets/thumb/calculadora.png',
+        link: 'https://calculadera.netlify.app/',
+        repo: 'https://github.com/jheanbryan/calculadora',
+        description:'Projeto simples de uma calculadora, um dos primeiros projetos feitos, bem simples, apenas para fixar alguns conceitos básicos do desenvolvimento web, principalmente do JS.',
         alt: 'Site Calculadora IMC'
     },
     {
