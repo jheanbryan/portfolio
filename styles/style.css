@@ -154,54 +154,48 @@ main{
     margin-top: 5em;
 }
 .projetos-title-h2{
-    margin-right: auto;
-    margin-top: 3.5em;
+    margin-top: 3em;
 }
 .container-projetos{
+    margin-top: 10px;
     display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
     flex-wrap: wrap;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 20px;
 }
-.projeto{
-    margin-inline: 10px;
-    margin-top: 15px;
-    position: relative;
-    max-width: 350px;
+.card-projeto{
     cursor: pointer;
+    width: 350px;
+    height: 211px;
+    background:url(../assets/thumb/calculadora.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    transition: 0.5s;
 }
-.projeto > div{
-    position: absolute;
-    color: whitesmoke;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    margin-inline: auto;
+.card-projeto:hover{
+    transform: scale(1.05);
+}
+.card-projeto:hover .info-project{
+    animation: opacity 0.5s forwards;
+}
+.info-project{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
 }
-.projeto > div:hover{
-    opacity: 0.5;
-    transition: 1s;
+.container-icons{
+    text-align: center;
 }
-.projeto > div:hover span{
-    opacity: 0;
-    transition: 0.3s;
+.icon-programming-language{
+    width: 30px;
 }
-.projeto img{
-    max-width: 350px;
-    display: block;
-    height: 211px;
-}
-.projeto:hover{
-    transform: scale(1.05);
-    transition: 1s;
-}
-
-
 
 /*Contato*/
 .contato{

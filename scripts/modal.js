@@ -11,16 +11,27 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
         for(let i = 0; i<listaDeProjetos.length; i++){
             let projeto = listaDeProjetos[i];
             let divContent = `
-            <div class="projeto" id="${projeto.name}">
-            <div class="info-project">
-                <span>${projeto.title}</span>
-            </div>
-            <img src=${projeto.path} alt=${projeto.alt}>
+            <div class="card-projeto projeto" id="${projeto.name}">
+                <div class="info-project">
+                    <span class="title-project">
+                        ${projeto.title}
+                    </span>
+
+                    <div class="container-icons">
+                        <img src="./assets/icons/languages/css3-alt.svg" class="icon-programming-language" />
+                        <img src="./assets/icons/languages/css3-alt.svg"  class="icon-programming-language" />
+                    </div>
+
+                </div>
             </div>
             `;
             nomeContainer.innerHTML += divContent;
+            let cardProjeto = document.getElementById(projeto.name);
+            cardProjeto.style.backgroundImage = `url(${projeto.path})`;
+            
 
         }
+ 
     }
 
     desenharConteudo(nomeDaDiv);
@@ -32,6 +43,7 @@ function createAddEventListener(){
     projetosArray.forEach((item) => {
         item.addEventListener('click', () => openModal(item.id));
     });
+    console.log(projetosArray)
 }
 
 
