@@ -18,8 +18,7 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
                     </span>
 
                     <div class="container-icons">
-                        <img src="./assets/icons/languages/css3-alt.svg" class="icon-programming-language" />
-                        <img src="./assets/icons/languages/css3-alt.svg"  class="icon-programming-language" />
+                        <object class="icon-programming-language" type="image/svg+xml" data="./assets/icons/languages/white/css3-alt.svg"></object>
                     </div>
 
                 </div>
@@ -28,7 +27,7 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
             nomeContainer.innerHTML += divContent;
             let cardProjeto = document.getElementById(projeto.name);
             cardProjeto.style.backgroundImage = `url(${projeto.path})`;
-            
+            checkProgrammingLanguages(projeto);
 
         }
  
@@ -38,12 +37,21 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
 
 }
 
+function checkProgrammingLanguages(projeto){
+    projeto.technologies.forEach(technologie => {
+        //adicionar um svg la  no elemento de id #{projeto.name} e classe
+
+        const svgIcon = document.querySelector(`#${projeto.name} .icon-programming-language`);
+        svgIcon.setAttribute('data', `./assets/icons/languages/white/${technologie}.svg`)
+
+    });
+}
+
 function createAddEventListener(){
     const projetosArray = document.querySelectorAll('.projeto');
     projetosArray.forEach((item) => {
         item.addEventListener('click', () => openModal(item.id));
     });
-    console.log(projetosArray)
 }
 
 
