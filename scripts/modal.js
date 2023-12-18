@@ -18,7 +18,6 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
                     </span>
 
                     <div class="container-icons">
-                        <object class="icon-programming-language" type="image/svg+xml" data="./assets/icons/languages/white/css3-alt.svg"></object>
                     </div>
 
                 </div>
@@ -27,7 +26,7 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
             nomeContainer.innerHTML += divContent;
             let cardProjeto = document.getElementById(projeto.name);
             cardProjeto.style.backgroundImage = `url(${projeto.path})`;
-            checkProgrammingLanguages(projeto);
+            checkAndAddSvgTechnologie(projeto);
 
         }
  
@@ -37,12 +36,27 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
 
 }
 
-function checkProgrammingLanguages(projeto){
+function checkAndAddSvgTechnologie(projeto){
     projeto.technologies.forEach(technologie => {
-        //adicionar um svg la  no elemento de id #{projeto.name} e classe
+        //adicionar um svg la  no elemento de id #{projeto.name}
+        const containerSvg = document.querySelector(`#${projeto.name} .container-icons`)
 
-        const svgIcon = document.querySelector(`#${projeto.name} .icon-programming-language`);
-        svgIcon.setAttribute('data', `./assets/icons/languages/white/${technologie}.svg`)
+        const divSvg = document.createElement('div');
+        divSvg.classList.add('div-svg');
+
+        const newSvg = document.createElement('object');
+        newSvg.classList.add('icon-programming-language');
+        newSvg.type = 'image/svg+xml';
+        newSvg.data = `./assets/icons/languages/white/${technologie}.svg`;
+
+        const spanTechnologie = document.createElement('span');
+        spanTechnologie.classList.add('span-technologie')
+        spanTechnologie.textContent = technologie;
+
+        containerSvg.appendChild(divSvg);
+        divSvg.appendChild(newSvg);
+        divSvg.appendChild(spanTechnologie);
+
 
     });
 }

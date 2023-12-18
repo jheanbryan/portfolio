@@ -188,15 +188,30 @@ main{
     justify-content: center;
     margin: auto;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
+    color: #fff;
+
 }
 .container-icons{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.div-svg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
 }
 .icon-programming-language{
     width: 30px;
 }
-
+.span-technologie{
+    text-transform: uppercase;
+    font-size: 0.5rem;
+}
 /*Contato*/
 .contato{
     margin-top: 50px;
