@@ -1,20 +1,23 @@
 import { projetosWeb, projetosNode, projetosPython, projetosReactNative } from "./projetos.js";
 
-//redenizador de projetos no html
 let containerWeb = document.getElementById('projetos-web');
 let containerNodeJs = document.getElementById('projetos-node');
 let containerReactNative = document.getElementById('projetos-react-native');
 let containerPython = document.getElementById('projetos-python');
+let xModal = document.getElementById('xModal'); 
+let modal = document.querySelector('.modal');
 
-function redenizarProjeto(nomeDaDiv, nomeContainer){
-    function desenharConteudo(listaDeProjetos){
-        for(let i = 0; i<listaDeProjetos.length; i++){
-            let projeto = listaDeProjetos[i];
+
+//redenizador de projetos no html
+function renderProjectInHtml(divName, containerName){
+    function writeContent(projectsList){
+        for(let i = 0; i<projectsList.length; i++){
+            let project = projectsList[i];
             let divContent = `
-            <div class="card-projeto projeto" id="${projeto.name}">
+            <div class="card-projeto projeto" id="${project.name}">
                 <div class="info-project">
                     <span class="title-project">
-                        ${projeto.title}
+                        ${project.title}
                     </span>
 
                     <div class="container-icons">
@@ -23,22 +26,22 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
                 </div>
             </div>
             `;
-            nomeContainer.innerHTML += divContent;
-            let cardProjeto = document.getElementById(projeto.name);
-            cardProjeto.style.backgroundImage = `url(${projeto.path})`;
-            checkAndAddSvgTechnologie(projeto);
+            containerName.innerHTML += divContent;
+            let cardProject = document.getElementById(project.name);
+            cardProject.style.backgroundImage = `url(${project.path})`;
+            checkAndAddSvgTechnologie(project);
 
-        }
+        };
  
-    }
+    };
 
-    desenharConteudo(nomeDaDiv);
+    writeContent(divName);
 
-}
+};
 
+//Adicionar os icones nas imagens dos projetos
 function checkAndAddSvgTechnologie(projeto){
     projeto.technologies.forEach(technologie => {
-        //adicionar um svg la  no elemento de id #{projeto.name}
         const containerSvg = document.querySelector(`#${projeto.name} .container-icons`)
 
         const divSvg = document.createElement('div');
@@ -61,127 +64,57 @@ function checkAndAddSvgTechnologie(projeto){
     });
 }
 
+//abrir o modal de acordo com o projeto clicado
 function createAddEventListener(){
     const projetosArray = document.querySelectorAll('.projeto');
+
     projetosArray.forEach((item) => {
         item.addEventListener('click', () => openModal(item.id));
     });
 }
 
-
-//modal
-//Buscar o projeto
-let position = 0;
-function searchProject(listaDeProjetos, nomeDoProjeto){
-    for (let i = 0; i < listaDeProjetos.length; i++) {
-        if (listaDeProjetos[i].name === nomeDoProjeto) {
-            return listaDeProjetos, position = [i]
-        }
-    }
-};
-
 //Buscar informações do projeto
-function infosProjeto(listaDeProjetos){
-    imgModal.src = listaDeProjetos.path;
-    imgModal.alt = listaDeProjetos.alt;
-    tituloDoProjeto.innerHTML = listaDeProjetos.title;
-    descricaoDoProjeto.innerHTML = listaDeProjetos.description;
-    btnModalProjeto.href = listaDeProjetos.link;
-    btnModalRepositorio.href = listaDeProjetos.repo;
-    modal.style.display = 'flex'
+function addInfosInModal(projeto){
+    imgModal.src = projeto.path;
+    imgModal.alt = projeto.alt;
+    tituloDoProjeto.innerHTML = projeto.title;
+    descricaoDoProjeto.innerHTML = projeto.description;
+    btnModalProjeto.href = projeto.link;
+    btnModalRepositorio.href = projeto.repo;
+
+    modal.classList.remove('none');
+    modal.classList.add('flex');
 }
 
 // Função que verifica qual modal é e abri, já preenchido
-let modal = document.querySelector('.modal');
 function openModal(nomeDoProjeto){
-    switch (nomeDoProjeto) {
-        case 'handson':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[0])
-            break;
-        case 'cadastro-funcionarios':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[1])
-            break;
-        case 'calculadora':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[2])
-            break;
-        case 'gerador-de-senha':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[3])
-            break;
-        case 'magazine-hashtag':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[4])
-            break;
-        case 'dev-link':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[5])
-            break;
-        case 'login-form':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[6])
-            break;
-        case 'pagina-de-clima':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[7])
-            break;
-        case 'clone-youtube':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosWeb[8])
-            break;
-        case 'zapbot':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosNode[0])
-            break;   
-        case 'api-lp3':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosNode[1])
-            break; 
-        case 'crud-postgreSql':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosNode[2])
-            break;   
-        case 'netflix-login':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosReactNative[0])
-            break;   
-        case 'calculadoras-saude':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosReactNative[1])
-            break;  
-        case 'calculadoras-areas':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosReactNative[2])
-            break; 
-        case 'agendador-contatos':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosReactNative[3])
-            break;  
-        case 'medidor-velocidade-internet':
-            searchProject(nomeDoProjeto); // procurar o projeto
-            infosProjeto(projetosPython[0])
-            break;  
-        default:
-            break;
-    }
-}
-window.openModal = openModal;
-
-redenizarProjeto(projetosWeb, containerWeb);
-redenizarProjeto(projetosNode, containerNodeJs);
-redenizarProjeto(projetosReactNative, containerReactNative);
-redenizarProjeto(projetosPython, containerPython);
-createAddEventListener()
-
-
+    let arraysProjetcts = [projetosWeb, projetosNode, projetosReactNative, projetosPython]
+    for (let i = 0; i < arraysProjetcts.length; i++) {
+        arraysProjetcts[i].forEach((projeto)=> {
+            if (projeto.name == nomeDoProjeto) {
+                addInfosInModal(projeto);
+            };
+        });
+    };  
+};
 
 //Função para fechar o modal
 function closeModal(){
-    modal.style.display = 'none';
+    
+    modal.classList.remove('flex')
+    modal.classList.add('none');
 }
 
-let xModal = document.getElementById('xModal'); 
+//função principal
+function init() {
+    xModal.addEventListener('click', closeModal)
+    window.openModal = openModal;
 
-xModal.addEventListener('click', closeModal)
+    renderProjectInHtml(projetosWeb, containerWeb);
+    renderProjectInHtml(projetosNode, containerNodeJs);
+    renderProjectInHtml(projetosReactNative, containerReactNative);
+    renderProjectInHtml(projetosPython, containerPython);
+    createAddEventListener();
+}
+
+init();

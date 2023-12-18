@@ -302,7 +302,6 @@ main{
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
-    display: none;
 }
 .modal::backdrop{
     background-color: black; 
@@ -359,4 +358,10 @@ main{
 #descricaoDoProjeto{
     margin-top: 25px;
     line-height: 22px;
+}
+.none{
+    display: none;
+}
+.flex{
+    display: flex;
 }
