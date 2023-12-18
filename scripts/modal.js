@@ -11,20 +11,54 @@ function redenizarProjeto(nomeDaDiv, nomeContainer){
         for(let i = 0; i<listaDeProjetos.length; i++){
             let projeto = listaDeProjetos[i];
             let divContent = `
-            <div class="projeto" id="${projeto.name}">
-            <div class="info-project">
-                <span>${projeto.title}</span>
-            </div>
-            <img src=${projeto.path} alt=${projeto.alt}>
+            <div class="card-projeto projeto" id="${projeto.name}">
+                <div class="info-project">
+                    <span class="title-project">
+                        ${projeto.title}
+                    </span>
+
+                    <div class="container-icons">
+                    </div>
+
+                </div>
             </div>
             `;
             nomeContainer.innerHTML += divContent;
+            let cardProjeto = document.getElementById(projeto.name);
+            cardProjeto.style.backgroundImage = `url(${projeto.path})`;
+            checkAndAddSvgTechnologie(projeto);
 
         }
+ 
     }
 
     desenharConteudo(nomeDaDiv);
 
+}
+
+function checkAndAddSvgTechnologie(projeto){
+    projeto.technologies.forEach(technologie => {
+        //adicionar um svg la  no elemento de id #{projeto.name}
+        const containerSvg = document.querySelector(`#${projeto.name} .container-icons`)
+
+        const divSvg = document.createElement('div');
+        divSvg.classList.add('div-svg');
+
+        const newSvg = document.createElement('object');
+        newSvg.classList.add('icon-programming-language');
+        newSvg.type = 'image/svg+xml';
+        newSvg.data = `./assets/icons/languages/white/${technologie}.svg`;
+
+        const spanTechnologie = document.createElement('span');
+        spanTechnologie.classList.add('span-technologie')
+        spanTechnologie.textContent = technologie;
+
+        containerSvg.appendChild(divSvg);
+        divSvg.appendChild(newSvg);
+        divSvg.appendChild(spanTechnologie);
+
+
+    });
 }
 
 function createAddEventListener(){
