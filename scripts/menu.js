@@ -9,15 +9,17 @@ const light = document.getElementById('lightMode'); //modo claro
 const arrowUp = document.getElementById('containerArrowUp');
 
 function openMenu(){
-    navbarItens.style.left = '0'
-    xCloseMenu.style.display = 'block';
-    barsOpenMen.style.display = 'none';
+    navbarItens.classList.add('visible');
+    xCloseMenu.classList.add('block');
+    barsOpenMen.classList.add('none');
+
 }
 
 function closeMenu(){
-    navbarItens.style.left = '-400px';
-    xCloseMenu.style.display = 'none';
-    barsOpenMen.style.display = 'block';
+    navbarItens.classList.remove('visible');
+    xCloseMenu.classList.remove('block');
+    barsOpenMen.classList.remove('none');
+
 }
 
 function alterTheme(theme){
@@ -43,18 +45,20 @@ xCloseMenu.addEventListener('click', closeMenu);
 dark.addEventListener('click', () => alterTheme('dark'));
 light.addEventListener('click', () => alterTheme('light'));
 
+//fechar menu caso tenha click
 for (let i = 0; i < itenMenu.length; i++) {
     itenMenu[i].addEventListener('click', closeMenu);
 }
 
-
+//Arrow up
 window.addEventListener('scroll', function() {
     var scrollVertical = window.scrollY || document.documentElement.scrollTop;
 
     if (scrollVertical >= 1250) {
-        arrowUp.style.display = 'block';
+        arrowUp.classList.add('block');
 
     } else {
-        arrowUp.style.display = 'none'
+        arrowUp.classList.remove('block');
+
     }
 });

@@ -15,15 +15,14 @@
     width: 100%;
     margin-top: 30px;
     position: absolute;
-    left: -400px;
     transition: 1s;
+    left: -400px;
 }
 #burguerMenu, #xMenu{
     cursor: pointer;
     font-size: 2em;
 }
 #xMenu{
-    display: none;
 }
 .title-h1{
     text-decoration: none;
@@ -72,4 +71,8 @@
     cursor: pointer;
     background-color: white;
     color: #13131F;
+}
+
+.visible{
+    transform: translateX(400px)
 }
