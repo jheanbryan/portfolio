@@ -40,9 +40,9 @@ function renderProjectInHtml(divName, containerName){
 };
 
 //Adicionar os icones nas imagens dos projetos
-function checkAndAddSvgTechnologie(projeto){
-    projeto.technologies.forEach(technologie => {
-        const containerSvg = document.querySelector(`#${projeto.name} .container-icons`)
+function checkAndAddSvgTechnologie(project){
+    project.technologies.forEach(technologie => {
+        const containerSvg = document.querySelector(`#${project.name} .container-icons`)
 
         const divSvg = document.createElement('div');
         divSvg.classList.add('div-svg');
@@ -66,33 +66,32 @@ function checkAndAddSvgTechnologie(projeto){
 
 //abrir o modal de acordo com o projeto clicado
 function createAddEventListener(){
-    const projetosArray = document.querySelectorAll('.projeto');
-
-    projetosArray.forEach((item) => {
-        item.addEventListener('click', () => openModal(item.id));
+    const projectsArray = document.querySelectorAll('.projeto');
+    projectsArray.forEach((divProject) => {
+        divProject.addEventListener('click', () => openModal(divProject.id));
     });
 }
 
 //Buscar informações do projeto
-function addInfosInModal(projeto){
-    imgModal.src = projeto.path;
-    imgModal.alt = projeto.alt;
-    tituloDoProjeto.innerHTML = projeto.title;
-    descricaoDoProjeto.innerHTML = projeto.description;
-    btnModalProjeto.href = projeto.link;
-    btnModalRepositorio.href = projeto.repo;
+function addInfosInModal(project){
+    imgModal.src = project.path;
+    imgModal.alt = project.alt;
+    tituloDoProjeto.innerHTML = project.title;
+    descricaoDoProjeto.innerHTML = project.description;
+    btnModalProjeto.href = project.link;
+    btnModalRepositorio.href = project.repo;
 
     modal.classList.remove('none');
     modal.classList.add('flex');
 }
 
 // Função que verifica qual modal é e abri, já preenchido
-function openModal(nomeDoProjeto){
+function openModal(projectName){
     let arraysProjetcts = [projetosWeb, projetosNode, projetosReactNative, projetosPython]
     for (let i = 0; i < arraysProjetcts.length; i++) {
-        arraysProjetcts[i].forEach((projeto)=> {
-            if (projeto.name == nomeDoProjeto) {
-                addInfosInModal(projeto);
+        arraysProjetcts[i].forEach((project)=> {
+            if (project.name == projectName) {
+                addInfosInModal(project);
             };
         });
     };  
@@ -100,7 +99,6 @@ function openModal(nomeDoProjeto){
 
 //Função para fechar o modal
 function closeModal(){
-    
     modal.classList.remove('flex')
     modal.classList.add('none');
 }
