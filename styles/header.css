@@ -22,8 +22,6 @@
     cursor: pointer;
     font-size: 2em;
 }
-#xMenu{
-}
 .title-h1{
     text-decoration: none;
     color: white;
@@ -58,10 +56,6 @@
 }
 #darkMode, #lightMode{
     cursor: pointer;
-    display: block;
-}
-#darkMode{
-    display: none;
 }
 .nav-bar li{
     width: 100%;
