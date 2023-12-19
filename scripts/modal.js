@@ -103,8 +103,12 @@ function closeModal(){
     modal.classList.add('none');
 }
 
+function finishLoadAnimation() {
+    const divAnimaton = document.querySelector('.load-animation');
+    divAnimaton.classList.add('noneLoad')
+}
 //função principal
-function init() {
+export function initModal() {
     xModal.addEventListener('click', closeModal)
     window.openModal = openModal;
 
@@ -112,7 +116,6 @@ function init() {
     renderProjectInHtml(projetosNode, containerNodeJs);
     renderProjectInHtml(projetosReactNative, containerReactNative);
     renderProjectInHtml(projetosPython, containerPython);
+    finishLoadAnimation();
     createAddEventListener();
 }
-
-init();

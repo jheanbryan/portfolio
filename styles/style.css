@@ -62,28 +62,12 @@ main{
         repeat-typing 8s steps(40, end) infinite;
     
 }
+
+
 .name-description span{
     color: gray;
 }
 
-/* Chaveframes para animação */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color1) }
-}
-@keyframes repeat-typing {
-    0%, 100% {
-        width: 0;
-    }
-    10%, 90% {
-        width: 100%;
-    }
-}
 .div-foto{
     max-width: 300px;
 }

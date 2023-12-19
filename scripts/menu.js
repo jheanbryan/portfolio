@@ -65,11 +65,11 @@ function visibilityInArrowUp() {
     });
 }
 
-function init() {
+
+
+export function initMenu() {
     addEventInMenu();
     AddEventForClickInMenuItem();
     addEventInIconTheme();
     visibilityInArrowUp();
 }
-
-init();
