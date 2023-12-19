@@ -1,5 +1,5 @@
 .load-animation {
-    background-color: rgb(83, 83, 83, 0.95);
+    background-color: rgb(83, 83, 83, 1);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,6 +10,7 @@
     align-items: center;
     flex-direction: column;
     gap: 5px;
+    animation: opacity 1s;
 }
 
 .circle{
