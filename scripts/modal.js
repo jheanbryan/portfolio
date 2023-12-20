@@ -15,6 +15,7 @@ function renderProjectInHtml(divName, containerName){
             let project = projectsList[i];
             let divContent = `
             <div class="card-projeto projeto" id="${project.name}">
+
                 <div class="info-project">
                     <span class="title-project">
                         ${project.title}
@@ -24,6 +25,7 @@ function renderProjectInHtml(divName, containerName){
                     </div>
 
                 </div>
+
             </div>
             `;
             containerName.innerHTML += divContent;
@@ -36,7 +38,6 @@ function renderProjectInHtml(divName, containerName){
     };
 
     writeContent(divName);
-
 };
 
 //Adicionar os icones nas imagens dos projetos
@@ -103,10 +104,12 @@ function closeModal(){
     modal.classList.add('none');
 }
 
+//terminar animação de loading
 function finishLoadAnimation() {
     const divAnimaton = document.querySelector('.load-animation');
     divAnimaton.classList.add('noneLoad')
 }
+
 //função principal
 export function initModal() {
     xModal.addEventListener('click', closeModal)
