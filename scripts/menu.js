@@ -5,6 +5,8 @@ const itenMenu = document.querySelectorAll('.navBarIten'); //navbar menu
 const dark = document.getElementById('darkMode'); //modo dark
 const light = document.getElementById('lightMode'); //modo claro
 const arrowUp = document.getElementById('containerArrowUp');
+const containerChangeTheme = document.querySelector('.ball-change-theme')
+const html = document.querySelector('html');
 
 function openMenu(){
     navbarItens.classList.add('visible');
@@ -22,13 +24,28 @@ function alterTheme(theme){
     if (theme === 'dark') {
         light.classList.remove('none');
         dark.classList.remove('block');
-        document.querySelector('html').classList.toggle('light-mode');
+        html.classList.toggle('light-mode');
+        addAnimation()
 
     } else if (theme === 'light') {
         light.classList.add('none');
         dark.classList.add('block');
-        document.querySelector('html').classList.toggle('light-mode');
+        html.classList.toggle('light-mode');
+        addAnimation()
     };
+
+    //verificar qual tema esta presente para adicionar ou remover a animação
+    function addAnimation() {
+        if (containerChangeTheme.classList.contains('lightThemeAnimation')) {
+            containerChangeTheme.classList.remove('lightThemeAnimation');
+            containerChangeTheme.classList.add('darkThemeAnimation');
+
+        } else {
+            containerChangeTheme.classList.remove('darkThemeAnimation');
+            containerChangeTheme.classList.add('lightThemeAnimation');
+        };
+    };
+
 };
 
 //menu

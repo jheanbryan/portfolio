@@ -1,6 +1,6 @@
 .header-nav{
     background-color: #13131F;
-    color: white;
+    color: #ffffff;
     border-bottom: 3px solid #8B008B;
     height: 80px;
     padding-top: 10px;
@@ -24,7 +24,7 @@
 }
 .title-h1{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 .menu-icon{
     width: 30px;
@@ -51,11 +51,42 @@
 .nav-bar a{
     text-decoration: none;
     width: 100%;
-    color: white;
+    color: #ffffff;
 
 }
 #darkMode, #lightMode{
     cursor: pointer;
+}
+.change-theme-container{
+    background-color: #fff;
+    width: 64px;
+    padding: 2px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.ball-change-theme{
+    transition: 1s;
+    transform: translateX(100%);
+    align-items: center;
+}
+.ball-change-theme span{
+    height: 100%;
+}
+.lightThemeAnimation{
+    animation: lightThemeAnimation 1s forwards;
+}
+.darkThemeAnimation{
+    animation: darkThemeAnimation 1s forwards;
+
+}
+.change-theme-container img{
+    background-color: #808080;
+    width: 30px;
+    border-radius: 50%;
+    padding: 2px;
+    height: 100%;
+
 }
 .nav-bar li{
     width: 100%;
@@ -63,7 +94,7 @@
 }
 .nav-bar li:hover{
     cursor: pointer;
-    background-color: white;
+    background-color: #ffffff;
     color: #13131F;
 }
 
