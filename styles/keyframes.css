@@ -43,3 +43,38 @@
         transform: rotate(360deg);
     }   
 }
+
+
+@keyframes lightThemeAnimation {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes darkThemeAnimation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes transitionForLight {
+    from {
+        background-color: #13131F;
+    }
+    to {
+        background-color: #dcdcdc;
+    }
+}
+
+@keyframes transitionForDark {
+    from {
+        background-color: #dcdcdc;
+    }
+    to {
+        background-color: #13131F;
+    }
+}
+
