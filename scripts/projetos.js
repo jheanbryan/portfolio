@@ -94,7 +94,7 @@ export const projetosWeb = [
         name: 'lol-champs',
         title: 'LoL Champs',
         path: 'assets/thumb/lol-champs.png',
-        link: 'https://lol-champs-sigma.vercel.app',
+        link: 'https://lolzinn.vercel.app/',
         repo: 'https://github.com/jheanbryan/lol-champs',
         description:'Página que exibe uma lista de todos os campeões do game League of Legends, ainda é possível consultar outras informações dos campeões, como descrição e habilidades. ',
         alt: 'Página de Campeões do LoL. Utilizei Js para fazer requisições a api oficial da riot games.',
