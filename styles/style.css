@@ -45,6 +45,8 @@ main{
     flex-wrap: wrap;
     width: 100%;
     max-width: 900px;
+    margin-bottom: 150px;
+    margin-top: 200px;
 }
 .name-description{
     display: flex;
@@ -286,6 +288,7 @@ main{
     flex-direction: column;
     gap: 10px;
     overflow-y: auto;
+
 }
 .modal::backdrop{
     background-color: black; 
@@ -293,9 +296,19 @@ main{
 .containerX{
     width: 100%;
     display: flex;
+    position: absolute;
+
 }
 #xModal{
-    margin-left: auto;
+    background-color: var(--background);
+    padding: 5px;
+    border-radius: 50%;
+    left: 5px; 
+    top: 5px; 
+    cursor: pointer;
+    border: 2px solid var(--border); 
+    z-index: 200;
+    position: absolute
 }
 .modal-content{
     display: flex;
@@ -308,8 +321,18 @@ main{
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
+
+    
+}
+.container-img-modal{
+    max-height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 .img-modal{
+    max-width: 900px;
     width: 100%;
 }
 .container-buttons{
@@ -340,7 +363,7 @@ main{
     text-align: center;
 }
 #descricaoDoProjeto{
-    margin-top: 25px;
+    margin: 25px 0 25px 0;
     line-height: 22px;
 }
 .none{

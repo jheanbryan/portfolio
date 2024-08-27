@@ -1,16 +1,5 @@
 export const projetosWeb = [
     {
-        name: 'handson',
-        title: 'HandsOn',
-        path: 'assets/thumb/handson.png',
-        link: 'https://handsonweb.netlify.app',
-        repo: 'https://github.com/jheanbryan/HandsOn',
-        description:'Página web simples, feita apenas para relembrar alguns conceitos de HTML e CSS.',
-        alt: 'Site HandsOn',
-        technologies: ['html', 'css']
-
-    },
-    {
         name: 'cadastro-funcionarios',
         title: 'Cadastro de funcionários',
         path: 'assets/thumb/cadastro-funcionarios.png',
@@ -18,16 +7,6 @@ export const projetosWeb = [
         repo: 'https://github.com/jheanbryan/cadastro_funcionarios',
         description:'CRUD - CREATE, READ UPDATE e DELETE <br> Os dados inseridos pelo usuário são salvos no Local Storage.',
         alt: 'Site Cadastro de funcionários',
-        technologies: ['html', 'css', 'js']
-    },
-    {
-        name: 'calculadora',
-        title: 'Calculadora',
-        path: 'assets/thumb/calculadora.png',
-        link: 'https://calculadera.netlify.app/',
-        repo: 'https://github.com/jheanbryan/calculadora',
-        description:'Projeto simples de uma calculadora, um dos primeiros projetos feitos, bem simples, apenas para fixar alguns conceitos básicos do desenvolvimento web, principalmente do JS.',
-        alt: 'Site Calculadora IMC',
         technologies: ['html', 'css', 'js']
     },
     {
@@ -49,16 +28,6 @@ export const projetosWeb = [
         description:'Ecomerce construído durante o intensivão de JavaScript da Hashtag. Esse projeto utiliza o localStorage como banco de dados para salvar as informações do usuário, tais como histórico de compras e itens adicionados ao carrinho.',
         alt: 'Ecomerce',
         technologies: ['html', 'css', 'js']
-    },
-    {
-        name: 'dev-link',
-        title: 'Site Dev Link',
-        path: 'assets/thumb/dev-link.png',
-        link: 'https://jheanbryan.github.io/dev-link/',
-        repo: 'https://github.com/jheanbryan/dev-link',
-        description:'Projeto web simples realizado durante o curso Discovery da Rocketseat',
-        alt: 'dev link - site simples',
-        technologies: ['html', 'css']
     },
     {
         name: 'login-form',
@@ -96,9 +65,19 @@ export const projetosWeb = [
         path: 'assets/thumb/lol-champs.png',
         link: 'https://lolzinn.vercel.app/',
         repo: 'https://github.com/jheanbryan/lol-champs',
-        description:'Página que exibe uma lista de todos os campeões do game League of Legends, ainda é possível consultar outras informações dos campeões, como descrição e habilidades. ',
-        alt: 'Página de Campeões do LoL. Utilizei Js para fazer requisições a api oficial da riot games.',
+        description:'Página que exibe uma lista de todos os campeões do game League of Legends, ainda é possível consultar outras informações dos campeões, como descrição e habilidades. Utilizei Js para fazer requisições a api oficial da riot games.',
+        alt: 'Página de Campeões do LoL',
         technologies: ['html', 'css', 'js']
+    },
+    {
+        name: 'hardware-pc',
+        title: 'Ecomerce',
+        path: 'assets/thumb/hardware-pc.png',
+        link: 'https://jheanbryan.github.io/hardware-pc/frontend/index.html',
+        repo: 'https://github.com/jheanbryan/hardware-pc',
+        description:'Projeto Full-Stack, utilizei node e express para a api, e html, css e js no front-end. Projeto ainda em desenvolvimento, o esperado é concluir e deixar 100% funcional, sendo possivel comprar produtos e fazer login no site .',
+        alt: 'Ecomerce de hardware',
+        technologies: ['html', 'css', 'js', 'node-js']
     },
 ];
 
