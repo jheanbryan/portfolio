@@ -5,8 +5,9 @@ const itenMenu = document.querySelectorAll('.navBarIten'); //navbar menu
 const dark = document.getElementById('darkMode'); //modo dark
 const light = document.getElementById('lightMode'); //modo claro
 const arrowUp = document.getElementById('containerArrowUp');
-const containerChangeTheme = document.querySelector('.ball-change-theme')
 const html = document.querySelector('html');
+const circle = document.querySelector('.circle');
+const themeSwitchContainer = document.getElementById('themeSwitchContainer'); 
 
 function openMenu(){
     navbarItens.classList.add('visible');
@@ -21,32 +22,13 @@ function closeMenu(){
 }
 
 function alterTheme(theme){
-    if (theme === 'dark') {
-        light.classList.remove('none');
-        dark.classList.remove('block');
-        html.classList.toggle('light-mode');
-        addAnimation()
+    html.classList.toggle('light-mode', theme === 'light');
+}
 
-    } else if (theme === 'light') {
-        light.classList.add('none');
-        dark.classList.add('block');
-        html.classList.toggle('light-mode');
-        addAnimation()
-    };
-
-    //verificar qual tema esta presente para adicionar ou remover a animação
-    function addAnimation() {
-        if (containerChangeTheme.classList.contains('lightThemeAnimation')) {
-            containerChangeTheme.classList.remove('lightThemeAnimation');
-            containerChangeTheme.classList.add('darkThemeAnimation');
-
-        } else {
-            containerChangeTheme.classList.remove('darkThemeAnimation');
-            containerChangeTheme.classList.add('lightThemeAnimation');
-        };
-    };
-
-};
+function toggleTheme() {
+    circle.checked = !circle.checked;
+    alterTheme(circle.checked ? 'light' : 'dark');
+}
 
 //menu
 function addEventInMenu() {
@@ -55,17 +37,16 @@ function addEventInMenu() {
 }
 
 //dark mode
-function addEventInIconTheme(params) {
-    dark.addEventListener('click', () => alterTheme('dark'));
-    light.addEventListener('click', () => alterTheme('light'));
+function addEventInIconTheme() {
+    themeSwitchContainer.addEventListener('click', toggleTheme);
 }
 
 //fechar menu caso tenha click
-function AddEventForClickInMenuItem(params) {
+function AddEventForClickInMenuItem() {
     for (let i = 0; i < itenMenu.length; i++) {
         itenMenu[i].addEventListener('click', closeMenu);
     };
-};
+}
 
 //Arrow up
 function visibilityInArrowUp() {
@@ -74,15 +55,11 @@ function visibilityInArrowUp() {
     
         if (scrollVertical >= 1250) {
             arrowUp.classList.add('block');
-    
         } else {
             arrowUp.classList.remove('block');
-    
-        };
+        }
     });
 }
-
-
 
 export function initMenu() {
     addEventInMenu();
