@@ -1,245 +1,259 @@
 <!DOCTYPE html>
 <html lang="pt-BR" prefix="og: https://ogp.me/ns#">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jhean Bryan || Portfolio</title>
 
-        <!--CSS-->
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/keyframes.css">
-        <link rel="stylesheet" href="styles/animation-load.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhean Bryan || Portfolio</title>
 
-        <!--Open graph-->
-        <meta property="og:title" content="Jhean Bryan Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content="Portfolio pessoal de Jhean Bryan" />
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:url" content="https://jhean.vercel.app/" />
-    </head>
-    <body id="top-page">
-        <!--Header and menu navigation-->
-        <header class="header-nav">
+    <!--CSS-->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/keyframes.css">
+    <link rel="stylesheet" href="styles/animation-load.css">
 
-            <!--Menu Hamburguer-->
-            <div>
-                <span id="burguerMenu" class="">
-                    <img src="assets/icons/header/bars-solid.svg" alt="icone abrir menu" class="menu-icon">
-                </span>
+    <!--Open graph-->
+    <meta property="og:title" content="Jhean Bryan Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Portfolio pessoal de Jhean Bryan" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://jhean.vercel.app/" />
+</head>
 
-                <span id="xMenu" class="none">
-                    <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon">
-                </span>
-            </div>
+<body id="top-page">
+    <!--Header and menu navigation-->
+    <header class="header-nav">
+
+        <!--Menu Hamburguer-->
+        <div>
+            <span id="burguerMenu" class="">
+                <img src="assets/icons/header/bars-solid.svg" alt="icone abrir menu" class="menu-icon">
+            </span>
+
+            <span id="xMenu" class="none">
+                <img src="assets/icons/header/x-solid.svg" alt="icone fechar menu" class="menu-icon">
+            </span>
+        </div>
 
 
-            <div id="itens" class="">
-                <ul class="nav-bar">
-                    <a href="#sobre" class="navBarIten"><li>Sobre</li></a>
-                    <a href="#tecnologias" class="navBarIten"><li>Tecnologias</li></a>
-                    <a href="#projetos" class="navBarIten"><li>Projetos</li></a>
-                    <a href="#contato" class="navBarIten"><li>Contato</li></a>
-                </ul>
-            </div>
+        <div id="itens" class="">
+            <ul class="nav-bar">
+                <a href="#sobre" class="navBarIten">
+                    <li>Sobre</li>
+                </a>
+                <a href="#tecnologias" class="navBarIten">
+                    <li>Tecnologias</li>
+                </a>
+                <a href="#projetos" class="navBarIten">
+                    <li>Projetos</li>
+                </a>
+                <a href="#contato" class="navBarIten">
+                    <li>Contato</li>
+                </a>
+            </ul>
+        </div>
 
-            <!--Portfolio-->
-            <div>
-                <a href="index.html" class="title-h1"><h1>Portfolio</h1></a>
-            </div>
-            
-            <!--Botão mudar tema-->
-            <div id="themeSwitchContainer">
-                <label class="switch" for="switch" id="container-toggle-theme">
+        <!--Portfolio-->
+        <div>
+            <a href="index.html" class="title-h1">
+                <h1>Portfolio</h1>
+            </a>
+        </div>
+
+        <!--Botão mudar tema-->
+        <div id="themeSwitchContainer">
+            <label class="switch" for="switch" id="container-toggle-theme">
                 <input id="switch" type="checkbox" class="circle" />
-                <svg
-                    viewBox="0 0 384 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="moon svg"
-                    id="darkMode"
-                >
+                <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" class="moon svg" id="darkMode">
                     !Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License
                     - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.
                     <path
-                    d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
-                    ></path>
+                        d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                    </path>
                 </svg>
                 <div class="sun svg" id="lightMode">
                     <span class="dot"></span>
                 </div>
-                </label>
-            </div>                
+            </label>
+        </div>
 
 
 
-        </header>
+    </header>
 
-        <!--The main content-->
-        <main>
+    <!--The main content-->
+    <main>
 
-            <!--Introduction, name and photo-->
-            <div class="intro">
-                <section class="name-description">
-                        <h2>Olá, eu sou o Jhean Bryan</h2>
-                        <span>Front-End Developer</span>
-                </section>
+        <!--Introduction, name and photo-->
+        <div class="intro">
+            <section class="name-description">
+                <h2>Olá, eu sou o Jhean Bryan</h2>
+                <span>Front-End Developer</span>
+            </section>
 
-                <!--
+            <!--
                 <section>
                     <div class="div-foto">
                         <img src="https://thypix.com/wp-content/uploads/2021/10/grey-anime-profile-picture-thypix-53-594x700.jpg" alt="foto" class="foto">
                     </div>
                 </section>
                 -->
+        </div>
+
+        <!--About me-->
+        <div class="sobre-mim" id="sobre">
+            <h2>Sobre Mim</h2>
+            <div>
+                <p>
+                    Sou Desenvolverdor Front-End, estudante de TSI e ADS!
+                    Apesar de conhecer algumas tecnologias que não são para front-end, aprecio muito mais desenvolver
+                    interfaces do que desenvolver aplicações no back-end.
+                    Atualmente tenho algumas experiências com HTML, CSS, JavaScript e React-Native, pretendo em breve me
+                    aprofundar em React.
+                </p>
+            </div>
+        </div>
+
+        <!--technologies-->
+        <div class="tecnologias" id="tecnologias">
+            <h2>Tecnologias</h2>
+            <div class="itens-tecnologias">
+
+                <div class="tecnologia">
+                    <span>HTML5</span>
+                    <img src="assets/icons/languages/purple/html5.svg" alt="icone html">
+                </div>
+
+                <div class="tecnologia">
+                    <span>CSS3</span>
+                    <img src="assets/icons/languages/purple/css3-alt.svg" alt="icone css">
+                </div>
+
+                <div class="tecnologia">
+                    <span>JavaScript</span>
+                    <img src="assets/icons/languages/purple/square-js.svg" alt="icone JavaScript">
+                </div>
+
+                <div class="tecnologia">
+                    <span>NodeJS</span>
+                    <img src="assets/icons/languages/purple/node-js.svg" alt="icone nodeJs">
+                </div>
+
+                <div class="tecnologia">
+                    <span>React Native</span>
+                    <img src="assets/icons/languages/purple/react.svg" alt="icone react native">
+                </div>
+
+                <div class="tecnologia">
+                    <span>Python</span>
+                    <img src="assets/icons/languages/purple/python.svg" alt="icone python">
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!--Arrow up-->
+        <a href="#top-page" class="containerArrowUp" id="containerArrowUp">
+            <div class="back-to-top">
+                <img src="assets/icons/others/arrow-up-solid.svg" alt="seta subir para o topo" class="arrow-up">
+            </div>
+        </a>
+
+
+        <!--Titles-->
+        <h2 class="h2-title" id="projetos">Projetos</h2>
+        <h3 class="projetos-title-h2">Projetos Web</h3>
+
+        <!--Web Projects-->
+        <div class="container-projetos" id="projetos-web">
+        </div>
+
+        <!--Projetos Node-->
+        <h3 class="projetos-title-h2">Projetos NodeJS</h3>
+        <div class="container-projetos" id="projetos-node">
+        </div>
+
+        <!--Projetos React Native-->
+        <h3 class="projetos-title-h2">Projetos React Native</h3>
+        <div class="container-projetos" id="projetos-react-native">
+        </div>
+
+        <!--Projetos Python-->
+        <h3 class="projetos-title-h2">Projetos Python</h3>
+        <div class="container-projetos" id="projetos-python">
+        </div>
+
+        <!--Information for contact-->
+        <h2 class="h2-title" id="contato">Contato</h2>
+        <div class="contato">
+            <div class="forma-de-contato">
+                <a href="https://www.linkedin.com/in/jhean-bryan/" target="_blank">
+                    <img src="assets/icons/social-media/linkedin.svg" alt="icone do linkedin" class="icon-contato">
+                    <span>Linkedin</span>
+                    <span>Jhean Bryan</span>
+                </a>
             </div>
 
-            <!--About me-->
-            <div class="sobre-mim" id="sobre">
-                <h2>Sobre Mim</h2>
-                <div>
-                    <p>
-                        Sou Desenvolverdor Front-End, estudante de TSI e ADS!
-                        Apesar de conhecer algumas tecnologias que não são para front-end, aprecio muito mais desenvolver interfaces do que desenvolver aplicações no back-end.
-                        Atualmente tenho algumas experiências com HTML, CSS, JavaScript e React-Native, pretendo em breve me aprofundar em React.
+            <div class="forma-de-contato">
+                <a href="mailto:jheandev@gmail.com" target="_blank">
+                    <img src="assets/icons/social-media/envelope-regular.svg" alt="icone de email" class="icon-contato">
+                    <span>Email</span>
+                    <span>jheandev@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="forma-de-contato">
+                <a href="https://github.com/jheanbryan" target="_blank">
+                    <img src="assets/icons/social-media/github.svg" alt="icone do github" class="icon-contato">
+                    <span>Github</span>
+                    <span>@jheanbryan</span>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!--Modal for project-->
+        <div class="modal none">
+
+            <div class="containerX">
+                <img src="assets/icons/header/x-solid.svg" alt="icone de fechar modal" class="menu-icon" id="xModal">
+            </div>
+
+            <div class="modal-content">
+                <div class="img-and-info">
+                    <div class="container-img-modal">
+                        <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal">
+                    </div>
+
+                    <div class="container-buttons">
+                        <a href="" target="_blank" id="btnModalProjeto"><button class="btn-modal">Ver
+                                projeto</button></a>
+                        <a href="" target="_blank" id="btnModalRepositorio"><button class="btn-modal" tabindex="10">Ver
+                                repositório</button></a>
+                    </div>
+                </div>
+
+                <div class="desciption-project">
+                    <h1 id="tituloDoProjeto">Titulo do projeto</h1>
+                    <p id="descricaoDoProjeto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio eveniet voluptate
+                        repellendus, nesciunt, ullam exercitationem quam laudantium eligendi ea, sed maiores at
+                        inventore eius ab vel atque pariatur corporis.
                     </p>
                 </div>
             </div>
 
-            <!--technologies-->
-            <div class="tecnologias" id="tecnologias">       
-                <h2>Tecnologias</h2>
-                <div class="itens-tecnologias">
+        </div>
 
-                    <div class="tecnologia">
-                        <span>HTML5</span>
-                        <img src="assets/icons/languages/purple/html5.svg" alt="icone html">    
-                    </div>
+        <!--container load-->
+        <section class="load-animation flex">
+            <div class="circle"></div>
+            Aguarde...
+        </section>
+    </main>
+    <script type="module" src="scripts/main.js"></script>
+</body>
 
-                    <div class="tecnologia">
-                        <span>CSS3</span>
-                        <img src="assets/icons/languages/purple/css3-alt.svg" alt="icone css">    
-                    </div>
-
-                    <div class="tecnologia">
-                        <span>JavaScript</span>
-                        <img src="assets/icons/languages/purple/square-js.svg" alt="icone JavaScript">
-                    </div>
-
-                    <div class="tecnologia">
-                        <span>NodeJS</span>
-                        <img src="assets/icons/languages/purple/node-js.svg" alt="icone nodeJs"> 
-                    </div>
-
-                    <div class="tecnologia">
-                        <span>React Native</span>
-                        <img src="assets/icons/languages/purple/react.svg" alt="icone react native">
-                    </div>
-                    
-                    <div class="tecnologia">
-                        <span>Python</span>
-                        <img src="assets/icons/languages/purple/python.svg" alt="icone python"> 
-                    </div>
-                       
-                        
-                       
-                </div>
-            </div>
-
-            <!--Arrow up-->
-            <a href="#top-page" class="containerArrowUp" id="containerArrowUp">
-                <div class="back-to-top">
-                    <img src="assets/icons/others/arrow-up-solid.svg" alt="seta subir para o topo" class="arrow-up">
-                </div>
-            </a>
-
-                        
-            <!--Titles-->
-            <h2 class="h2-title" id="projetos">Projetos</h2>
-            <h3 class="projetos-title-h2">Projetos Web</h3>
-
-            <!--Web Projects-->
-            <div class="container-projetos" id="projetos-web">
-            </div>
-
-            <!--Projetos Node-->
-            <h3 class="projetos-title-h2">Projetos NodeJS</h3>
-            <div class="container-projetos" id="projetos-node">
-            </div>
-
-            <!--Projetos React Native-->
-            <h3 class="projetos-title-h2">Projetos React Native</h3>
-            <div class="container-projetos" id="projetos-react-native">
-            </div>
-
-            <!--Projetos Python-->
-            <h3 class="projetos-title-h2">Projetos Python</h3>
-            <div class="container-projetos" id="projetos-python">
-            </div>
-
-            <!--Information for contact-->
-            <h2 class="h2-title" id="contato">Contato</h2>
-            <div class="contato">
-                <div class="forma-de-contato">
-                    <a href="https://www.linkedin.com/in/jhean-bryan/" target="_blank">
-                        <img src="assets/icons/social-media/linkedin.svg" alt="icone do linkedin" class="icon-contato">
-                        <span>Linkedin</span>
-                        <span>Jhean Bryan</span>
-                    </a>
-                </div>
-
-                <div class="forma-de-contato">
-                    <a href="mailto:jheandev@gmail.com" target="_blank">
-                        <img src="assets/icons/social-media/envelope-regular.svg" alt="icone de email" class="icon-contato">
-                        <span>Email</span>
-                        <span>jheandev@gmail.com</span>
-                    </a>
-                </div>
-
-                <div class="forma-de-contato">
-                    <a href="https://github.com/jheanbryan" target="_blank">
-                        <img src="assets/icons/social-media/github.svg" alt="icone do github" class="icon-contato">
-                        <span>Github</span>
-                        <span>@jheanbryan</span>
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!--Modal for project-->
-            <div class="modal none">
-
-                <div class="containerX">
-                    <img src="assets/icons/header/x-solid.svg" alt="icone de fechar modal" class="menu-icon" id="xModal">
-                </div>
-
-                <div class="modal-content">
-                    <div class="img-and-info">
-                        <div class="container-img-modal">
-                            <img src="assets/thumb/handson.png" alt="" class="img-modal" id="imgModal">
-                        </div>
-                        
-                        <div class="container-buttons">
-                            <a href="" target="_blank" id="btnModalProjeto"><button class="btn-modal">Ver projeto</button></a> 
-                            <a href="" target="_blank" id="btnModalRepositorio"><button class="btn-modal" tabindex="10">Ver repositório</button></a>
-                        </div>
-                    </div>
-                
-                    <div class="desciption-project">
-                        <h1 id="tituloDoProjeto">Titulo do projeto</h1>
-                        <p id="descricaoDoProjeto">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio eveniet voluptate repellendus, nesciunt, ullam exercitationem quam laudantium eligendi ea, sed maiores at inventore eius ab vel atque pariatur corporis.
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-
-            <!--container load-->
-            <section class="load-animation flex">
-                <div class="circle"></div>
-                Aguarde...
-            </section>
-        </main>
-        <script type="module" src="scripts/main.js"></script>
-    </body>
 </html>
