@@ -1,67 +1,65 @@
 const navbarItens = document.getElementById('itens'); // div do navbar
 const xCloseMenu = document.getElementById('xMenu'); //X do menu
 const barsOpenMen = document.getElementById('burguerMenu'); //Barras de abrir menu
-const itenMenu = document.querySelectorAll('.navBarIten'); //navbar menu
-const dark = document.getElementById('darkMode'); //modo dark
-const light = document.getElementById('lightMode'); //modo claro
-const arrowUp = document.getElementById('containerArrowUp');
-const html = document.querySelector('html');
-const circle = document.querySelector('.circle');
-const themeSwitchContainer = document.getElementById('themeSwitchContainer'); 
 
-function openMenu(){
+const openMenu = () => {
     navbarItens.classList.add('visible');
     xCloseMenu.classList.add('block');
     barsOpenMen.classList.add('none');
 }
 
-function closeMenu(){
+const closeMenu = () => {
     navbarItens.classList.remove('visible');
     xCloseMenu.classList.remove('block');
     barsOpenMen.classList.remove('none');
 }
 
-function alterTheme(theme){
+const alterTheme = (theme) => {
+    const html = document.querySelector('html');
     html.classList.toggle('light-mode', theme === 'light');
 }
 
-function toggleTheme() {
+const toggleTheme = () => {
+    const circle = document.querySelector('.circle');
     circle.checked = !circle.checked;
     alterTheme(circle.checked ? 'light' : 'dark');
 }
 
 //menu
-function addEventInMenu() {
+const addEventInMenu = () => {
     barsOpenMen.addEventListener('click', openMenu);
     xCloseMenu.addEventListener('click', closeMenu);
 }
 
 //dark mode
-function addEventInIconTheme() {
+const addEventInIconTheme = () => {
+    const themeSwitchContainer = document.getElementById('themeSwitchContainer'); 
     themeSwitchContainer.addEventListener('click', toggleTheme);
 }
 
 //fechar menu caso tenha click
-function AddEventForClickInMenuItem() {
-    for (let i = 0; i < itenMenu.length; i++) {
-        itenMenu[i].addEventListener('click', closeMenu);
+const AddEventForClickInMenuItem = () => {
+    const itemMenu = document.querySelectorAll('.navBarIten');
+    for (let i = 0; i < itemMenu.length; i++) {
+        itemMenu[i].addEventListener('click', closeMenu);
     };
 }
 
 //Arrow up
-function visibilityInArrowUp() {
-    window.addEventListener('scroll', function() {
+const visibilityInArrowUp = () => {
+    const arrowUp = document.getElementById('containerArrowUp');
+    
+    window.addEventListener('scroll', () => {
         var scrollVertical = window.scrollY || document.documentElement.scrollTop;
     
-        if (scrollVertical >= 1250) {
+        if (scrollVertical >= 1250)
             arrowUp.classList.add('block');
-        } else {
+        else
             arrowUp.classList.remove('block');
-        }
     });
 }
 
-export function initMenu() {
+export const initMenu = () => {
     addEventInMenu();
     AddEventForClickInMenuItem();
     addEventInIconTheme();

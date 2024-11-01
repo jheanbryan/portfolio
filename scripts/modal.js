@@ -1,16 +1,10 @@
 import { projetosWeb, projetosNode, projetosPython, projetosReactNative } from "./projetos.js";
-
-let containerWeb = document.getElementById('projetos-web');
-let containerNodeJs = document.getElementById('projetos-node');
-let containerReactNative = document.getElementById('projetos-react-native');
-let containerPython = document.getElementById('projetos-python');
-let xModal = document.getElementById('xModal'); 
 let modal = document.querySelector('.modal');
 
 
 //redenizador de projetos no html
-function renderProjectInHtml(divName, containerName){
-    function writeContent(projectsList){
+const renderProjectInHtml = (divName, containerName) => {
+    const writeContent = (projectsList) => {
         for(let i = 0; i<projectsList.length; i++){
             let project = projectsList[i];
             let divContent = `
@@ -41,7 +35,7 @@ function renderProjectInHtml(divName, containerName){
 };
 
 //Adicionar os icones nas imagens dos projetos
-function checkAndAddSvgTechnologie(project){
+const checkAndAddSvgTechnologie = (project) => {
     project.technologies.forEach(technologie => {
         const containerSvg = document.querySelector(`#${project.name} .container-icons`)
 
@@ -66,7 +60,7 @@ function checkAndAddSvgTechnologie(project){
 }
 
 //abrir o modal de acordo com o projeto clicado
-function createAddEventListener(){
+const createAddEventListener = () => {
     const projectsArray = document.querySelectorAll('.projeto');
     projectsArray.forEach((divProject) => {
         divProject.addEventListener('click', () => openModal(divProject.id));
@@ -74,7 +68,7 @@ function createAddEventListener(){
 }
 
 //Buscar informações do projeto
-function addInfosInModal(project){
+const addInfosInModal = (project) => {
     imgModal.src = project.path;
     imgModal.alt = project.alt;
     tituloDoProjeto.innerHTML = project.title;
@@ -87,7 +81,7 @@ function addInfosInModal(project){
 }
 
 // Função que verifica qual modal é e abri, já preenchido
-function openModal(projectName){
+const openModal = (projectName) => {
     let arraysProjetcts = [projetosWeb, projetosNode, projetosReactNative, projetosPython]
     for (let i = 0; i < arraysProjetcts.length; i++) {
         arraysProjetcts[i].forEach((project)=> {
@@ -99,22 +93,27 @@ function openModal(projectName){
 };
 
 //Função para fechar o modal
-function closeModal(){
+const closeModal = () => {
     modal.classList.remove('flex')
     modal.classList.add('none');
 }
 
 //terminar animação de loading
-function finishLoadAnimation() {
+const finishLoadAnimation = () => {
     const divAnimaton = document.querySelector('.load-animation');
     divAnimaton.classList.add('noneLoad')
 }
 
 //função principal
-export function initModal() {
+export const initModal = () => {
+    let xModal = document.getElementById('xModal'); 
     xModal.addEventListener('click', closeModal)
     window.openModal = openModal;
 
+    let containerWeb = document.getElementById('projetos-web');
+    let containerNodeJs = document.getElementById('projetos-node');
+    let containerReactNative = document.getElementById('projetos-react-native');
+    let containerPython = document.getElementById('projetos-python');
     renderProjectInHtml(projetosWeb, containerWeb);
     renderProjectInHtml(projetosNode, containerNodeJs);
     renderProjectInHtml(projetosReactNative, containerReactNative);
